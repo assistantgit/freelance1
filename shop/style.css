@@ -1,0 +1,778 @@
+/* ====================================
+   1. CSS VARIABLES (ROOT)
+   ==================================== */
+:root {
+    --primary-color: #ff3c5a;
+    --orange-color: #FF8C00;
+    --dark-bg: #121212;
+    --text-light: #ffffff;
+    --text-gray: #b0b0b0;
+    --text-dark: #333333;
+    --bg-light: #F5F5F5;
+}
+
+/* ====================================
+   2. BASE STYLES
+   ==================================== */
+body {
+    font-family: 'Commissioner', sans-serif;
+    overflow-x: hidden;
+    background-color: var(--bg-light);
+}
+
+/* ====================================
+   3. LAYOUT COMPONENTS
+   ==================================== */
+
+/* ----- 3.1 Navbar ----- */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.navbar-brand img { 
+    height: 30px; 
+}
+
+.navbar .nav-link {
+    color: var(--text-light);
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+/* ----- 3.2 Hero Section ----- */
+.hero-section {
+    background: url('images/bg1.png') no-repeat center center;
+    background-size: cover;
+    color: var(--text-light);
+    padding: 100px 0;
+    max-height: 450px;
+    position: relative;
+}
+
+.hero-content { 
+    max-width: 600px; 
+}
+
+.hero-title {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    justify-self: center;
+    top: 30px;
+    position: relative;
+    text-align: center;
+    font-family: 'Tektur', sans-serif;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: var(--text-gray);
+}
+
+/* ----- 3.3 Connect Section ----- */
+.connect {
+    background-image: url('images/connect.png');
+    color: white;
+    align-content: center;
+    justify-self: center;
+    overflow: hidden;
+    margin: 80px 0;
+    max-height: 400px;
+    padding: 0px 60px;
+    background-size: 100% auto;
+}
+
+/* ----- 3.4 Features Section ----- */
+.features-section {
+    padding: 40px 0;
+    margin-top: -100px;
+    position: relative;
+    z-index: 10;
+}
+
+/* ----- 3.5 About Section ----- */
+.about-section {
+    padding: 80px 0;
+}
+
+/* ----- 3.6 Footer ----- */
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+/* ====================================
+   4. UI COMPONENTS
+   ==================================== */
+
+/* ----- 4.1 Buttons ----- */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    border-width: 0px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 2px -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+    box-shadow: 3px -3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.buy-btn {
+    color: var(--primary-color);
+    font-weight: bold;
+    height: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.buy-btn:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--dark-bg);
+    box-shadow: 3px -3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button-group {
+    font-size: 18px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-outline-secondary {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+/* ----- 4.2 Product Cards ----- */
+.product-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+    width: 100%;
+    border: 1px solid white;
+    overflow: hidden;
+    position: relative;
+    padding: 15px;
+    min-height: 180px;
+}
+
+.product-card > div:first-child {
+    flex: 1;
+    min-width: 0;
+    padding-right: 5px;
+    z-index: 1;
+}
+
+.image-wrapper,
+.image-wrapper2 {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    align-self: center;
+}
+
+.image-wrapper {
+    margin-right: -40px;
+    margin-bottom: -40px;
+}
+
+.image-wrapper2 {
+    margin-right: -30px;
+    margin-bottom: -30px;
+}
+
+.product-image {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* ----- 4.3 Menu Items ----- */
+.menu-item {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: font-weight 0.3s;
+    flex: 0 1 auto;
+    text-align: center;
+}
+
+/* ----- 4.4 Gallery Items ----- */
+.gallery-item img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    justify-self: center;
+    display: block;
+}
+
+.gallery-item:hover img { 
+    transform: scale(1.05); 
+}
+
+/* ----- 4.5 Categories ----- */
+.categories {
+    padding-left: 10px;
+}
+
+.categories h3, 
+.categories .section-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.category-item {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.category-item input[type="checkbox"] {
+    margin-right: 5px;
+    transform: scale(1.1);
+}
+
+.category-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.all-categories {
+    border-top: 1px solid #ccc;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+.offcanvas-end {
+    width: 250px;
+}
+
+.offcanvas-body .categories {
+    width: 100%;
+}
+
+/* ====================================
+   5. TYPOGRAPHY
+   ==================================== */
+.about-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: start;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-title {
+    color: #dc3545;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+    display: flex;         
+    align-items: center; 
+    gap: 1rem; 
+}
+
+.section-subtitle {
+    color: #6c757d;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 12px;
+}
+
+.section-subtitle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    bottom: 3px;
+    width: 2px;
+    background-color: red;
+    border-radius: 2px;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.footer-contact-item { 
+    font-size: 14px; 
+    color: var(--text-gray); 
+    margin-bottom: 5px;
+}
+
+/* ====================================
+   6. UTILITY CLASSES
+   ==================================== */
+
+/* ----- 6.1 Alignment Classes ----- */
+.about-align {
+    align-items: center;
+}
+
+.competence-align {
+    align-items: start;
+}
+
+.footer-align {
+    align-items: center;
+}
+
+/* ----- 6.2 Decorative Elements ----- */
+.red-line {
+    height: 5px;
+    background-color: #dc3545;
+    display: block;
+}
+
+.gray-line {
+    height: 3px;
+    background-color: #ccc;
+    display: block;
+    margin: 0 10px;
+}
+
+.orange-line {
+    display: block;
+    width: 200px;
+    height: 5px;
+    background-color: var(--orange-color);
+    margin: 20px 0;
+}
+
+/* ====================================
+   7. CONTACT & FOOTER SPECIFIC
+   ==================================== */
+.contact-info-container {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    margin-right: 15px;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.contact-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.contact-info-container-mobile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo { 
+    max-width: 150px; 
+    height: auto; 
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.footer-contact-container {
+    width: 100%;
+}
+
+.footer-contact-column {
+    flex: 1;
+}
+
+.footer-contact-column:first-child {
+    margin-right: 20px;
+}
+
+/* ====================================
+   8. MEDIA QUERIES
+   ==================================== */
+
+/* ----- 8.1 Extra Large Devices (1200px and up) ----- */
+@media (max-width: 1199px) {
+    /* Navbar mobile behavior */
+    .navbar-expand-lg .navbar-collapse {
+        display: none !important;
+    }
+    
+    .navbar-expand-lg .navbar-toggler {
+        display: block;
+    }
+    
+    .navbar-expand-lg.navbar-dark .navbar-nav {
+        flex-direction: column;
+    }
+    
+    .navbar-expand-lg .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+    
+    .navbar-collapse {
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .nav-item {
+        width: 100%;
+    }
+}
+
+/* ----- 8.2 Large Devices (992px to 1199px) ----- */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .product-card {
+        flex-direction: column;
+        min-height: auto;
+        padding-right: 15px;
+    }
+
+    .image-wrapper {
+        width: 160px;
+        height: 160px;
+        margin: 15px auto;
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+
+    .product-image {
+        width: 100%;
+        max-width: 180px;
+        margin: 0 auto;
+    }
+
+    .product-card > div:first-child {
+        padding-right: 0;
+        max-width: 100%;
+    }
+
+    .button-group {
+        position: static;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+/* ----- 8.3 Medium Devices (768px to 1000px) ----- */
+@media (min-width: 768px) and (max-width: 1000px) {
+    .product-card {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .product-card > div:first-child {
+        padding-right: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .image-wrapper,
+    .image-wrapper2 {
+        position: relative;
+        width: 160px;
+        height: 160px;
+        margin: 10px auto;
+    }
+
+    .product-image {
+        width: 160px;
+        height: auto;
+    }
+
+    .button-group {
+        position: static;
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
+
+/* ----- 8.4 Medium Devices (tablets, 768px and down) ----- */
+@media (max-width: 991px) {
+    .features-section { 
+        margin-top: -40px;
+    }
+    
+    .gallery-item img {
+        width: 100%;
+        max-width: 460px;
+        margin: 0 auto;
+    }
+    
+    .about-section .text-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-section .gap-3 { 
+        gap: 1rem !important; 
+    }
+
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-contact-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title { 
+        top: 0px;
+        font-size: 28px; 
+    }
+    
+    .connect {
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+    }
+
+    .contact-info-container {
+        position: static;
+        transform: none;
+        justify-content: center;
+        margin-bottom: 8px;
+        flex-wrap: wrap;
+    }
+    
+    .product-title {
+        font-size: 20px;
+    }
+
+    .contact-info-container-mobile {
+        order: -1;
+        margin-right: 10px;
+    }
+    
+    .navbar-brand {
+        order: 0;
+    }
+    
+    .navbar-toggler {
+        order: 1;
+    }
+    
+    .navbar .container {
+        flex-wrap: nowrap;
+    }
+    
+    .contact-info { 
+        margin-bottom: 5px; 
+    }
+
+    .about-section{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .about-text{
+        text-align: start;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-contact-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-contact-column:first-child {
+        margin-right: 0;
+    }
+    
+    .btn-outline-secondary {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* ----- 8.5 Small Devices (767px and down) ----- */
+@media (max-width: 767px) {
+    .contact-info-container-mobile .contact-text {
+        display: none;
+    }
+
+    .contact-info {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    .contact-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .navbar-brand img {
+        height: 25px;
+    }
+    
+    .product-card {
+        min-height: 160px;
+    }
+    
+    .image-wrapper,
+    .image-wrapper2 {
+        width: 140px;
+        height: 140px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top: auto;
+        transform: none;
+    }
+    
+    .image-wrapper {
+        margin-right: -30px;
+        margin-bottom: -30px;
+    }
+    
+    .image-wrapper2 {
+        margin-right: -5px;
+        margin-bottom: -5px;
+    }
+    
+    .product-image {
+        width: 180px;
+    }
+    
+    .product-card > div:first-child {
+        padding-right: 100px;
+        max-width: 100%;
+    }
+    
+    .section-title {
+        font-size: 1rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.85rem;
+    }
+}
+
+/* ----- 8.6 Extra Small Devices (576px and down) ----- */
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 120px 0 50px 0;
+        min-height: 10px;
+    }
+    
+    .hero-title { 
+        font-size: 24px; 
+    }
+    
+    .hero-subtitle { 
+        font-size: 14px; 
+    }
+    
+    .about-section { 
+        padding: 40px 0; 
+    }
+    
+    .features-section .row { 
+        margin-top: -40px; 
+    }
+
+    .footer-logo {
+        max-width: 120px;
+    }
+
+    .footer-title {
+        font-size: 16px;
+    }
+
+    .footer-contact-item {
+        font-size: 12px;
+    }
+}
+
+/* Show navbar menu when active */
+.navbar-collapse.show {
+    display: block !important;
+}

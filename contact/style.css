@@ -1,0 +1,738 @@
+/* Existing CSS (unchanged, included for context) */
+:root {
+    --primary-color: #ff3c5a;
+    --orange-color: #FF8C00;
+    --text-light: #ffffff;
+    --text-gray: #b0b0b0;
+    --bg-light: #F5F5F5;
+    --dark-bg: #1F1F1F;
+}
+
+body {
+    font-family: 'Commissioner', sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand img { 
+    height: 30px; 
+}
+
+.navbar .nav-link {
+    color: var(--text-light);
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: 40%;
+    margin-top: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: block;
+}
+
+.btn-primary:hover {
+    background-color: #e0354e;
+    border-color: #e0354e;
+}
+
+.hero-section {
+    background: url('images/bg1.png') no-repeat center center;
+    background-size: cover;
+    color: var(--text-light);
+    padding: 100px 0;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-align {
+    align-items: center;
+}
+
+.contact-info-container-mobile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    order: -1;
+}
+
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+.footer-logo { 
+    max-width: 150px; 
+    height: auto; 
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.footer-contact-item { 
+    font-size: 14px; 
+    color: var(--text-gray); 
+    margin-bottom: 5px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.footer-contact-container {
+    width: 100%;
+}
+
+.footer-contact-column {
+    flex: 1;
+}
+
+.footer-contact-column:first-child {
+    margin-right: 20px;
+}
+
+.contact-info-container-mobile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    order: -1;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 991px) { 
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-contact-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-contact-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-contact-column:first-child {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-logo {
+        max-width: 120px;
+    }
+
+    .footer-title {
+        font-size: 16px;
+    }
+
+    .footer-contact-item {
+        font-size: 12px;
+    }
+}
+
+.about-section .footer-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap; 
+    width: 100%;
+}
+
+.hero-title {
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 30px;
+    font-family: 'Tektur', sans-serif;
+    text-align: center;
+}
+
+.about-section {
+    background-color: var(--bg-light);
+    padding: 80px 0;
+}
+
+.manufacturing-section .manufacturing-content {
+    padding: 20px;
+    background-color: var(--dark-bg);
+}
+
+.experience-block{
+    padding: 0 0;
+}
+
+.about-title {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: start;
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-sub-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-align: start;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.experience-strip {
+    background-color: var(--primary-color);
+    padding: 15px;
+    gap: 100px;
+    text-align: center;
+    justify-content: center;
+}
+
+.experience-item {
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    width: 48%;
+    margin-bottom: 15px;
+}
+
+.experience-number {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Tektur', sans-serif;
+}
+
+.experience-text {
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: start;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.orange-line {
+    display: block;
+    width: 200px;
+    height: 5px;
+    background-color: var(--orange-color);
+    margin: 20px 0;
+}
+
+.gallery-item img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    justify-self: center;
+    display: block;
+}
+
+.gallery-item:hover img { 
+    transform: scale(1.05); 
+}
+
+.contact-info-container {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    margin-right: 15px;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.contact-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.about-item { 
+    font-size: 16px; 
+    color: black;
+    text-align: start;
+    margin-bottom: 5px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Existing CSS remains unchanged, add these new rules */
+
+.about-align {
+    align-items: center;
+}
+
+.competence-align {
+    align-items: start;
+}
+
+/* Contact Form Styles */
+.contact-form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    min-height: 400px;
+    margin: 0 auto;
+}
+
+.form-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: start;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.about-section .footer-contact-column {
+    flex: 0 0 auto;
+    width: auto;
+    margin-right: 60px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+    background-color: transparent;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.contact-form label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #777;
+}
+
+.icon-form {
+    font-size: 16px;
+    color: #777;
+    margin-right: 10px;
+}
+
+@media (max-width: 991px) {
+    .gallery-item img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title { 
+        font-size: 30px; 
+    }
+
+    .contact-info-container {
+        position: static;
+        transform: none;
+        justify-content: center;
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+    }
+    .experience-strip {
+        gap: 10px;
+        text-align: center;
+        justify-content: start;
+    }
+
+    .navbar-brand {
+        order: 0;
+    }
+
+    .navbar-toggler {
+        order: 1;
+    }
+
+    .navbar .container {
+        flex-wrap: nowrap;
+    }
+
+    .contact-info { 
+        margin-bottom: 5px; 
+    }
+    .about-section{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-sub-title{
+        text-align: start;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-text{
+        text-align: start;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .form-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding-top: 120px;
+    }
+    
+    .contact-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 2px;
+    }
+
+    .about-title{
+        font-size: 24px;
+    }
+    .about-text {
+        font-size: 16px;
+    }
+    .about-sub-title {
+        font-size: 16px;
+    }
+
+    .experience-strip {
+        gap: 10px;
+        text-align: center;
+        justify-content: start;
+    }
+    .experience-block{
+        padding: 0 40px;
+        position: relative;
+        bottom: 40px;
+    }
+
+    .experience-item {
+        justify-content: start;
+        text-align: start;
+    }
+
+    .hero-title { 
+        font-size: 26px; 
+    }
+
+    .about-section { 
+        padding: 40px 0; 
+    }
+    .contact-form-container {
+        padding: 20px 15px;
+    }
+    
+    .contact-form input {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-text {
+        display: none !important;
+    }
+
+    .contact-info-container-mobile .contact-text {
+        display: none !important;
+    }
+
+    .contact-info {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    .contact-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .navbar .container {
+        flex-wrap: nowrap;
+    }
+    
+    .navbar-brand {
+        order: 0;
+    }
+    
+    .navbar-toggler {
+        order: 1;
+    }
+
+    .navbar-brand img {
+        height: 25px;
+    }
+}
+
+.manufacturing-section {
+    background-color: var(--dark-bg);
+    padding: 60px 0;
+    max-width: 1200px; /* Constrain the section width */
+    margin: 0 auto; /* Center the section */
+}
+
+.manufacturing-image {
+    width: 100%;
+    max-width: 300px; /* Limit image size on mobile */
+    margin: 0 auto;
+}
+
+.manufacturing-content {
+    text-align: left;
+    padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+    .manufacturing-section {
+        padding: 80px 0;
+    }
+    .experience-strip {
+        gap: 10px;
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 15px;
+    }
+
+    .manufacturing-image {
+        max-width: 400px; /* Slightly larger image for tablets */
+        margin-bottom: 30px;
+    }
+
+    .manufacturing-content {
+        padding: 30px 0;
+    }
+
+    .experience-item {
+        width: 23%;
+    }
+    .experience-block{
+        position: relative;
+        bottom: 40px;
+    }
+
+    .experience-text {
+        font-size: 14px;
+    }
+}
+
+/* Desktop screens (992px and above) */
+@media (min-width: 992px) {
+    .manufacturing-section .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .manufacturing-image {
+        position: absolute;
+        left: -100px;
+        top: -100px;
+        max-width: 33%;
+        margin: 0;
+    }
+
+    .manufacturing-content {
+        margin-left: 25%;
+        padding: 20px;
+    }
+
+    .experience-strip {
+        gap: 10px;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 15px;
+    }
+
+    .experience-item {
+        width: auto;
+        margin-right: 10px;
+    }
+}
+
+.about-section .footer-contact-column:last-child {
+    margin-right: 0;
+}
+
+@media (max-width: 768px) {
+    .about-section .footer-column {
+        flex-direction: row ;
+    }
+    
+    .about-section .footer-contact-column {
+        width: auto;
+        margin-bottom: 0;
+        margin-right: 50px;
+    }
+    
+    .about-section .footer-contact-column:first-child {
+        margin-right: 50px;
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 991px) {
+    .manufacturing-image {
+        max-width: 100%; /* Remove max-width constraint */
+        width: 100%; /* Span full container width */
+        margin: 0; /* Remove auto margins to ensure full width */
+        display: block;
+    }
+
+    .manufacturing-image img {
+        width: 100%; /* Ensure the image itself spans the full width of its container */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image covers the area without distortion */
+    }
+}
+
+@media (max-width: 768px) {
+    .manufacturing-image {
+        max-width: 100%; /* Remove max-width constraint */
+        width: 100%; /* Span full container width */
+        margin: 0; /* Remove auto margins to ensure full width */
+        display: block;
+    }
+
+    .manufacturing-image img {
+        width: 100%; /* Ensure the image itself spans the full width of its container */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image covers the area without distortion */
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section .footer-column {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    /* Rule to make the manufacturing image span full width on mobile */
+    .manufacturing-image {
+        max-width: 100%; /* Remove max-width constraint */
+        width: 100vw; /* Span full viewport width */
+        margin: 0; /* Remove auto margins to ensure full width */
+        display: block;
+    }
+
+    .manufacturing-image img {
+        width: 100%; /* Ensure the image itself spans the full width of its container */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure the image covers the area without distortion */
+    }
+}
+
+
+
+@media (max-width: 1199px) {
+    .navbar-collapse {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 10px;
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 1199px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-expand-lg .navbar-toggler {
+        display: block;
+    }
+}
+
+.navbar-collapse.show {
+    display: block !important;
+}

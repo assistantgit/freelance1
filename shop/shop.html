@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CALCIT - Надійні рішення з металу для вашого бізнесу та будівництва">
+  <title>CALCIT - Надійні рішення з металу</title>
+  <!-- Bootstrap CSS for responsive design and styling -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Tektur&family=Commissioner&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .categories {
+      width: 200px;
+      padding-left: 10px;
+    }
+
+    .categories h3 {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .category-item {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .category-item input[type="checkbox"] {
+      margin-right: 5px;
+      transform: scale(1.1);
+    }
+
+    .all-categories {
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+      margin-top: 15px;
+    }
+
+    /* Modal styles from test project */
+    .modal-overlay {
+      display: none;
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      overflow: auto;
+    }
+
+    #stoveModal:target {
+      display: block;
+    }
+
+    .modal-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .modal-body {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      border-radius: 12px;
+      margin: 20px 0;
+      background: transparent;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.7);
+      text-decoration: none;
+    }
+
+    .modal-close img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .modal-close:hover {
+      opacity: 0.8;
+    }
+
+    .image-div {
+      width: 90%;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 2;
+      margin: 20px auto 0;
+    }
+
+    .product-images {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .product-image-container {
+        width: 220px;
+        height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .product-image-container img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .text-div {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 0 20px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+      top: -100px;
+      z-index: 1;
+      padding-top: 120px;
+    }
+
+    .product-description h3 {
+      font-size: 20px;
+    }
+
+    .product-description p {
+      margin-bottom: 15px;
+    }
+
+    .product-description ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .product-description li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .product-description li:before {
+      content: "•";
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .product-description li:last-child {
+      border-bottom: none;
+    }
+
+    /* Responsive modal styles */
+    @media (max-width: 768px) {
+      .modal-container {
+        padding: 10px;
+      }
+
+      .modal-body {
+        margin: 10px 0;
+      }
+
+      .image-div {
+        width: 95%;
+        margin: 10px auto 0;
+        padding: 15px;
+      }
+
+      .product-images {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .product-image-container {
+        width: 180px;
+        height: 200px;
+      }
+
+      .text-div {
+        margin: 0 10px 10px;
+        top: -60px;
+        padding: 15px;
+        padding-top: 80px;
+      }
+
+      .modal-close {
+        position: fixed;
+        top: 5px;
+        right: 50%;
+        transform: translateX(50%);
+        z-index: 20;
+        width: 35px;
+        height: 35px;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 50%;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .modal-container {
+        padding: 5px;
+      }
+
+      .image-div {
+        width: 86%;
+        padding: 15px;
+      }
+
+      .product-images {
+        gap: 10px;
+      }
+
+      .product-image-container {
+        width: 150px;
+        height: 170px;
+      }
+
+      .text-div {
+        padding: 15px;
+        padding-top: 60px;
+        top: -40px;
+      }
+
+      .modal-close {
+        position: fixed;
+        top: 5px;
+        right: 50%;
+        transform: translateX(50%);
+        z-index: 20;
+        width: 35px;
+        height: 35px;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 50%;
+      }
+    }
+
+    /* Support for older browsers without :has() */
+    @supports not (selector(:has(*))) {
+      body {
+        overflow: auto;
+      }
+      
+      #stoveModal:target {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+      }
+      
+      #stoveModal:target + * {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+    <!-- Modal for steel stove from test project -->
+    <div class="modal-overlay" id="stoveModal">
+      <div class="modal-container modal-lg">
+        <div class="modal-content modal-body">
+          <a href="#" class="modal-close">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDZMNiAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTYgNkwxOCAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Закрыть">
+          </a>
+          <div class="image-div">
+            <div class="product-images">
+              <div class="product-image-container">
+                <img src="images/popup_image1.png" alt="Стальна піч - фото 1">
+              </div>
+              <div class="product-image-container">
+                <img src="images/popup_image2.png" alt="Стальна піч - фото 2">
+              </div>
+            </div>
+          </div>
+          <div class="text-div">
+            <div class="product-description">
+              <p>
+                Стальна піч для опалення в приміщенні та функцією приготуванні їжі. Буржуйка виконана з металу товщиною 2 мм, та має вагу 12 кг (без футеровки вогнетривкою цеглою). На верхній панелі розташована одна конфорка на якій зручно варити їжу. Горіння дров відбуівається на колосникові з ВЧ-45 (високоміцний чугун)
+              </p>
+              <h3>Переваги буржуйки тривалого горіння:</h3>
+              <ul>
+                <li>топкова камера розділена спеціальною пластиною на дві частини – подовжений шлях диму, що сприяє тривалішому горінню і збільшує тепловіддачу</li>
+                <li>наявність варильної поверхні з однією конфоркою</li>
+                <li>регулювання інтенсивності горіння (надходження повітря в топку)</li>
+                <li>наявності заслінки-регулятора на патрубку димоходу</li>
+                <li>компактні розміри печі</li>
+                <li>збірка печі суцільними зварними швами всередині печі</li>
+                <li>щільно прилягає до корпусу завантажувальні дверцята із зручним засовом</li>
+                <li>стійкі ніжки, які піднімають піч від підлоги і сприяють конвекції</li>
+                <li>сучасний зовнішній вигляд</li>
+              </ul>
+              <h3>Основні технічні характеристики:</h3>
+              <ul>
+                <li>Габаритні розміри ВхШхГ - 600х290х450, мм</li>
+                <li>Висота з патрубком - 670 мм</li>
+                <li>Потужність - 7 кВт</li>
+                <li>ККД - 80%</li>
+                <li>Підключення до димаря - верхнє</li>
+                <li>Діаметр патрубка - 116 мм</li>
+                <li>Об'єм опалювального приміщення - 72 м3</li>
+                <li>Об'єм топки - 0,25 м3</li>
+                <li>Метал - 2 мм. Дверцята - 3мм</li>
+                <li>Вага - 12 кг (без вогнетривкої цегли)</li>
+                <li>Країна виробник - Україна</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="hero-section">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <div class="contact-info-container-mobile d-flex d-lg-none align-items-center me-3">
+            <div class="contact-info me-2">
+              <img src="images/phone_icon.png" class="contact-icon">
+              <span class="contact-text d-none d-sm-inline">+38 (067) 464 88 13</span>
+            </div>
+            <div class="contact-info">
+              <img src="images/icon_local.png" class="contact-icon" >
+              <span class="contact-text d-none d-sm-inline">Київ, вул. Гвинтошия,4 корп.9</span>
+            </div>
+          </div>
+
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img src="images/calcit_logo.png">
+          </a>
+
+          <!-- Contact info for desktop -->
+          <div class="contact-info-container mx-auto d-none d-lg-flex">
+            <div class="contact-info me-3">
+              <img src="images/phone_icon.png" class="contact-icon">
+              <span>+38 (067) 464 88 13</span>
+            </div>
+            <div class="contact-info">
+              <img src="images/icon_local.png" class="contact-icon">
+              <span>Київ, вул. Гвинтошия,4 корп.9</span>
+            </div>
+          </div>
+
+          <!-- Navbar toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Переключити навігацію">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#" aria-current="page">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">О нас</a>
+              </li>
+              <li class="nav-item"> 
+                <a class="nav-link" href="#">Блог</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-dark" href="#">Магазин</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <h1 class="hero-title">Магазин</h1>
+    </div>
+  </section>
+  <section class="products-section py-5">
+  <div class="container">
+    <h2 class="product-title d-flex align-items-center">
+      ПРОДУКЦІЯ
+      <span class="gray-line flex-grow-1"></span>
+      <!-- Button to toggle off-canvas categories on mobile -->
+      <button class="btn btn-outline-secondary d-md-none ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#categoriesOffcanvas" aria-controls="categoriesOffcanvas">
+        Категорії
+        <img src="images/category_icon.png" class="category-icon ms-2">
+      </button>
+    </h2>
+    <div class="row g-3">
+      <!-- Off-canvas for categories (mobile only) -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="categoriesOffcanvas" aria-labelledby="categoriesOffcanvasLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="categoriesOffcanvasLabel">Категорії</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрити"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="categories">
+            <div class="category-item"><input type="checkbox" id="burzhuyky"><label for="burzhuyky">Буржуйки</label></div>
+            <div class="category-item"><input type="checkbox" id="vahonchyky"><label for="vahonchyky">Будівельні вагончики</label></div>
+            <div class="category-item"><input type="checkbox" id="hen"><label for="hen">Генератори</label></div>
+            <div class="category-item"><input type="checkbox" id="littia"><label for="littia">Лиття металів</label></div>
+            <div class="category-item"><input type="checkbox" id="metalo"><label for="metalo">Металоконструкції</label></div>
+            <div class="category-item"><input type="checkbox" id="obladn"><label for="obladn">Обладнання</label></div>
+            <div class="category-item"><input type="checkbox" id="pandusy"><label for="pandusy">Пандуси та перила</label></div>
+            <div class="category-item"><input type="checkbox" id="obr"><label for="obr">Металообробка</label></div>
+            <div class="category-item all-categories">
+              <input type="checkbox" id="all" checked>
+              <label for="all">Всі категорії</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Categories for desktop -->
+      <div class="col-md-3 d-none d-md-block">
+        <div class="categories">
+          <p style="font-size: 20px; font-weight: bold; margin-bottom: 5px;">Категорії</p>
+          <div class="category-item"><input type="checkbox" id="burzhuyky_desktop"><label for="burzhuyky_desktop">Буржуйки</label></div>
+          <div class="category-item"><input type="checkbox" id="vahonchyky_desktop"><label for="vahonchyky_desktop">Будівельні вагончики</label></div>
+          <div class="category-item"><input type="checkbox" id="hen_desktop"><label for="hen_desktop">Генератори</label></div>
+          <div class="category-item"><input type="checkbox" id="littia_desktop"><label for="littia_desktop">Лиття металів</label></div>
+          <div class="category-item"><input type="checkbox" id="metalo_desktop"><label for="metalo_desktop">Металоконструкції</label></div>
+          <div class="category-item"><input type="checkbox" id="obladn_desktop"><label for="obladn_desktop">Обладнання</label></div>
+          <div class="category-item"><input type="checkbox" id="pandusy_desktop"><label for="pandusy_desktop">Пандуси та перила</label></div>
+          <div class="category-item"><input type="checkbox" id="obr_desktop"><label for="obr_desktop">Металообробка</label></div>
+          <div class="category-item all-categories">
+            <input type="checkbox" id="all_desktop" checked>
+            <label for="all_desktop">Всі категорії</label>
+          </div>
+        </div>
+      </div>
+      <!-- Right Side for Product Cards -->
+      <div class="col-md-9">
+        <div class="row g-3">
+          <!-- Product cards -->
+          <div class="col-md-6 mb-2">
+            <div class="product-card d-flex flex-column h-100">
+              <div class="d-flex flex-grow-1">
+                <div class="text-content flex-grow-1">
+                  <h5 class="section-title">ПАЛЕТНА ЛІНІЯ</h5>
+                  <p class="section-subtitle">Продуктивність, до 300 кг/год</p>
+                  <p class="section-subtitle">Потужність, 45-кВт</p>
+                </div>
+                <div class="image-wrapper2">
+                  <img src="images/shop_item8.png" class="product-image">
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="btn buy-btn me-2">Замовити</button>
+                <button class="btn">Детальніше</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-2">
+            <div class="product-card p-3 d-flex flex-column h-100">
+              <div class="d-flex flex-grow-1">
+                <div class="text-content flex-grow-1">
+                  <h5 class="section-title">З'ЄДНАННЯ КОНВЕЄРНИХ РЕШТАКІВ ...</h5>
+                  <p class="section-subtitle">Забезпечується надійне з'єднання ставу що гарантує стабільну ...</p>
+                </div>
+                <div class="image-wrapper2">
+                  <img src="images/shop_item1.png" class="product-image">
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="btn buy-btn me-2">Замовити</button>
+                <button class="btn">Детальніше</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Стальна піч with modal -->
+          <div class="col-md-6 mb-2">
+            <div class="product-card p-3 d-flex flex-column h-100">
+              <div class="d-flex flex-grow-1">
+                <div class="text-content flex-grow-1">
+                  <h5 class="section-title">СТАЛЬНА ПІЧ</h5>
+                  <p class="section-subtitle">Розміри ВхШхГ - 600х290х450, мм.</p>
+                  <p class="section-subtitle">Висота з патрубком - 670 мм.</p>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/shop_item6.png" class="product-image">
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="btn buy-btn me-2">Замовити</button>
+                <a href="#stoveModal" class="btn">Детальніше</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-2">
+            <div class="product-card p-3 d-flex flex-column h-100">
+              <div class="d-flex flex-grow-1">
+                <div class="text-content flex-grow-1">
+                  <h5 class="section-title">ДИСКИ ДЛЯ ШТАНГИ 25КГ</h5>
+                  <p class="section-subtitle">Виготовлені зі сталі 25кг посадковий діаметр 52мм/31мм</p>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/shop_item7.png" class="product-image">
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="btn buy-btn me-2">Замовити</button>
+                <button class="btn">Детальніше</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-2">
+            <div class="product-card p-3 d-flex flex-column h-100">
+              <div class="d-flex flex-grow-1">
+                <div class="text-content flex-grow-1">
+                  <h5 class="section-title">ДИСКИ ДЛЯ ШТАНГИ 15КГ</h5>
+                  <p class="section-subtitle">Виготовлені зі сталі 15кг посадковий діаметр 52мм/31мм</p>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/shop_item2.png" class="product-image">
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="btn buy-btn me-2">Замовити</button>
+                <button class="btn">Детальніше</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-2">
+            <div class="product-card p-3 d-flex flex-column h-100">
+              <div class="d-flex flex-grow-1">
+                <div class="text-content flex-grow-1">
+                  <h5 class="section-title">ДИСКИ ДЛЯ ШТАНГИ 10КГ</h5>
+                  <p class="section-subtitle">Виготовлені зі сталі 10кг посадковий діаметр 52мм/31мм</p>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/shop_item3.png" class="product-image">
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="btn buy-btn me-2">Замовити</button>
+                <button class="btn">Детальніше</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-2">
+            <div class="product-card p-3 d-flex flex-column h-100">
+              <div class="d-flex flex-grow-1">
+                <div class="text-content flex-grow-1">
+                  <h5 class="section-title">GE-9000 TBH RENTAL</h5>
+                  <p class="section-subtitle">Виробник: Італія</p>
+                  <p class="section-subtitle">Двигун: Бензиновий</p>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/shop_item5.png" class="product-image" alt="Генератори">
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="btn buy-btn me-2">Замовити</button>
+                <button class="btn">Детальніше</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-2">
+            <div class="product-card p-3 d-flex flex-column h-100">
+              <div class="d-flex flex-grow-1">
+                <div class="text-content flex-grow-1">
+                  <h5 class="section-title">GE-7500 MBH RENTAL</h5>
+                  <p class="section-subtitle">Виробник: Італія</p>
+                  <p class="section-subtitle">Двигун: Бензиновий</p>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/shop_item4.png" class="product-image">
+                </div>
+              </div>
+              <div class="button-group">
+                <button class="btn buy-btn me-2">Замовити</button>
+                <button class="btn">Детальніше</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container py-5 connect">
+    <h2 class="about-title text-white">Зв'яжіться з нами</h2>
+    <h5 class="about-text text-white">І ми реалізуємо ваш проєкт від ідеї до запуску</h5>
+    <div class="col-md-6">
+      <a class="btn btn-primary">Консультація</a>
+      <img src="images/phone_icon.png" class="contact-icon">
+      <span class="contact-text d-none d-sm-inline">+38 (067) 464 88 13</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row footer-align">
+        <div class="col-md-2 footer-column">
+          <img src="images/icon.png" class="footer-logo">
+        </div>
+        <div class="col-md-6 footer-column d-flex flex-column align-items-center">
+          <p class="footer-contact-item mb-1">© Всі права захищені.</p>
+          <p class="footer-contact-item mb-0">Розроблено Rise app</p>
+        </div>
+        <div class="col-md-4 footer-column">
+          <div class="footer-contact-container d-flex flex-wrap">
+            <div class="footer-contact-column flex-fill">
+              <h5 class="footer-title">E-mail</h5>
+              <p class="footer-contact-item">ljux@ukr.net</p>
+              <p class="footer-contact-item">0674648813@ukr.net</p>
+            </div>
+            <div class="footer-contact-column flex-fill">
+              <h5 class="footer-title">Телефон</h5>
+              <p class="footer-contact-item">+38 (067) 464 88 13</p>
+              <p class="footer-contact-item">+38 (098) 304 30 44</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JS for interactive components -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
