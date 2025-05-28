@@ -54,7 +54,7 @@
       overflow: auto;
     }
 
-    #stoveModal:target {
+    .modal-overlay:target {
       display: block;
     }
 
@@ -275,7 +275,7 @@
         overflow: auto;
       }
       
-      #stoveModal:target {
+      .modal-overlay:target {
         position: fixed;
         top: 0;
         left: 0;
@@ -284,14 +284,105 @@
         overflow: auto;
       }
       
-      #stoveModal:target + * {
+      .modal-overlay:target + * {
         display: none;
       }
     }
   </style>
 </head>
 <body>
-    <!-- Modal for steel stove from test project -->
+    <!-- Modal for Пелетна лінія -->
+    <div class="modal-overlay" id="pelletLineModal">
+      <div class="modal-container modal-lg">
+        <div class="modal-content modal-body">
+          <a href="#" class="modal-close">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDZMNiAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTYgNkwxOCAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Закрыть">
+          </a>
+          <div class="image-div">
+            <div class="product-images">
+              <div class="product-image-container">
+                <img src="images/pellet_line_image1.png" alt="Пелетна лінія - фото 1">
+              </div>
+              <div class="product-image-container">
+                <img src="images/pellet_line_image2.png" alt="Пелетна лінія - фото 2">
+              </div>
+            </div>
+          </div>
+          <div class="text-div">
+            <div class="product-description">
+              <p>
+                Пелетна лінія призначена для виробництва пелет з біомаси, таких як тирса, солома або інші органічні матеріали. Забезпечує високу продуктивність до 300 кг/год та оснащена потужним двигуном на 45 кВт.
+              </p>
+              <h3>Переваги пелетної лінії:</h3>
+              <ul>
+                <li>Висока продуктивність до 300 кг/год</li>
+                <li>Енергоефективний двигун на 45 кВт</li>
+                <li>Автоматизований процес виробництва</li>
+                <li>Міцна конструкція з якісної сталі</li>
+                <li>Простота в обслуговуванні та експлуатації</li>
+                <li>Компактний дизайн для економії простору</li>
+              </ul>
+              <h3>Основні технічні характеристики:</h3>
+              <ul>
+                <li>Продуктивність: до 300 кг/год</li>
+                <li>Потужність: 45 кВт</li>
+                <li>Напруга: 380 В</li>
+                <li>Матеріал: сталь високої міцності</li>
+                <li>Вага: 1200 кг</li>
+                <li>Габарити: 2500х1200х1800 мм</li>
+                <li>Країна виробник: Україна</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for З'єднання конвеєрних рештаків -->
+    <div class="modal-overlay" id="conveyorJointModal">
+      <div class="modal-container modal-lg">
+        <div class="modal-content modal-body">
+          <a href="#" class="modal-close">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDZMNiAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTYgNkwxOCAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Закрыть">
+          </a>
+          <div class="image-div">
+            <div class="product-images">
+              <div class="product-image-container">
+                <img src="images/conveyor_joint_image1.png" alt="З'єднання конвеєрних рештаків - фото 1">
+              </div>
+              <div class="product-image-container">
+                <img src="images/conveyor_joint_image2.png" alt="З'єднання конвеєрних рештаків - фото 2">
+              </div>
+            </div>
+          </div>
+          <div class="text-div">
+            <div class="product-description">
+              <p>
+                З'єднання конвеєрних рештаків забезпечує надійне та міцне з'єднання елементів конвеєра, що гарантує стабільну роботу системи транспортування. Виготовлено з високоякісної сталі для довговічності.
+              </p>
+              <h3>Переваги з'єднання:</h3>
+              <ul>
+                <li>Висока міцність і надійність з'єднання</li>
+                <li>Стійкість до корозії</li>
+                <li>Простота монтажу</li>
+                <li>Сумісність з різними типами конвеєрів</li>
+                <li>Довговічна конструкція</li>
+              </ul>
+              <h3>Основні технічні характеристики:</h3>
+              <ul>
+                <li>Матеріал: сталь</li>
+                <li>Товщина металу: 3 мм</li>
+                <li>Вага: 5 кг</li>
+                <li>Габарити: 300х150х50 мм</li>
+                <li>Країна виробник: Україна</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Стальна піч (existing) -->
     <div class="modal-overlay" id="stoveModal">
       <div class="modal-container modal-lg">
         <div class="modal-content modal-body">
@@ -338,6 +429,231 @@
                 <li>Метал - 2 мм. Дверцята - 3мм</li>
                 <li>Вага - 12 кг (без вогнетривкої цегли)</li>
                 <li>Країна виробник - Україна</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Диски для штанги 25кг -->
+    <div class="modal-overlay" id="barbell25kgModal">
+      <div class="modal-container modal-lg">
+        <div class="modal-content modal-body">
+          <a href="#" class="modal-close">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDZMNiAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTYgNkwxOCAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Закрыть">
+          </a>
+          <div class="image-div">
+            <div class="product-images">
+              <div class="product-image-container">
+                <img src="images/barbell_25kg_image1.png" alt="Диски для штанги 25кг - фото 1">
+              </div>
+              <div class="product-image-container">
+                <img src="images/barbell_25kg_image2.png" alt="Диски для штанги 25кг - фото 2">
+              </div>
+            </div>
+          </div>
+          <div class="text-div">
+            <div class="product-description">
+              <p>
+                Диски для штанги вагою 25 кг виготовлені з високоякісної сталі. Підходять для штанг з посадковими діаметрами 52 мм або 31 мм. Ідеально підходять для силових тренувань.
+              </p>
+              <h3>Переваги дисків:</h3>
+              <ul>
+                <li>Висока міцність і довговічність</li>
+                <li>Універсальний посадковий діаметр (52 мм/31 мм)</li>
+                <li>Зручна форма для захоплення</li>
+                <li>Стійкість до корозії</li>
+                <li>Точна вага 25 кг</li>
+              </ul>
+              <h3>Основні технічні характеристики:</h3>
+              <ul>
+                <li>Вага: 25 кг</li>
+                <li>Посадковий діаметр: 52 мм/31 мм</li>
+                <li>Матеріал: сталь</li>
+                <li>Діаметр диска: 450 мм</li>
+                <li>Товщина: 30 мм</li>
+                <li>Країна виробник: Україна</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Диски для штанги 15кг -->
+    <div class="modal-overlay" id="barbell15kgModal">
+      <div class="modal-container modal-lg">
+        <div class="modal-content modal-body">
+          <a href="#" class="modal-close">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDZMNiAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTYgNkwxOCAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Закрыть">
+          </a>
+          <div class="image-div">
+            <div class="product-images">
+              <div class="product-image-container">
+                <img src="images/barbell_15kg_image1.png" alt="Диски для штанги 15кг - фото 1">
+              </div>
+              <div class="product-image-container">
+                <img src="images/barbell_15kg_image2.png" alt="Диски для штанги 15кг - фото 2">
+              </div>
+            </div>
+          </div>
+          <div class="text-div">
+            <div class="product-description">
+              <p>
+                Диски для штанги вагою 15 кг виготовлені з міцної сталі. Сумісні з штангами посадкового діаметру 52 мм або 31 мм. Підходять для тренувань різного рівня.
+              </p>
+              <h3>Переваги дисків:</h3>
+              <ul>
+                <li>Міцна сталева конструкція</li>
+                <li>Універсальний посадковий діаметр</li>
+                <li>Зручна форма для використання</li>
+                <li>Стійкість до зносу</li>
+                <li>Точна вага 15 кг</li>
+              </ul>
+              <h3>Основні технічні характеристики:</h3>
+              <ul>
+                <li>Вага: 15 кг</li>
+                <li>Посадковий діаметр: 52 мм/31 мм</li>
+                <li>Матеріал: сталь</li>
+                <li>Діаметр диска: 400 мм</li>
+                <li>Товщина: 25 мм</li>
+                <li>Країна виробник: Україна</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Диски для штанги 10кг -->
+    <div class="modal-overlay" id="barbell10kgModal">
+      <div class="modal-container modal-lg">
+        <div class="modal-content modal-body">
+          <a href="#" class="modal-close">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDZMNiAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTYgNkwxOCAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Закрыть">
+          </a>
+          <div class="image-div">
+            <div class="product-images">
+              <div class="product-image-container">
+                <img src="images/barbell_10kg_image1.png" alt="Диски для штанги 10кг - фото 1">
+              </div>
+              <div class="product-image-container">
+                <img src="images/barbell_10kg_image2.png" alt="Диски для штанги 10кг - фото 2">
+              </div>
+            </div>
+          </div>
+          <div class="text-div">
+            <div class="product-description">
+              <p>
+                Диски для штанги вагою 10 кг виготовлені з високоякісної сталі. Підходять для штанг з посадковими діаметрами 52 мм або 31 мм. Ідеальні для початківців і професійних спортсменів.
+              </p>
+              <h3>Переваги дисків:</h3>
+              <ul>
+                <li>Висока міцність</li>
+                <li>Універсальний посадковий діаметр</li>
+                <li>Ергономічний дизайн</li>
+                <li>Стійкість до корозії</li>
+                <li>Точна вага 10 кг</li>
+              </ul>
+              <h3>Основні технічні характеристики:</h3>
+              <ul>
+                <li>Вага: 10 кг</li>
+                <li>Посадковий діаметр: 52 мм/31 мм</li>
+                <li>Матеріал: сталь</li>
+                <li>Діаметр диска: 350 мм</li>
+                <li>Товщина: 20 мм</li>
+                <li>Країна виробник: Україна</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for GE-9000 TBH RENTAL -->
+    <div class="modal-overlay" id="ge9000Modal">
+      <div class="modal-container modal-lg">
+        <div class="modal-content modal-body">
+          <a href="#" class="modal-close">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDZMNiAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTYgNkwxOCAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Закрыть">
+          </a>
+          <div class="image-div">
+            <div class="product-images">
+              <div class="product-image-container">
+                <img src="images/ge9000_image1.png" alt="GE-9000 TBH RENTAL - фото 1">
+              </div>
+              <div class="product-image-container">
+                <img src="images/ge9000_image2.png" alt="GE-9000 TBH RENTAL - фото 2">
+              </div>
+            </div>
+          </div>
+          <div class="text-div">
+            <div class="product-description">
+              <p>
+                Генератор GE-9000 TBH RENTAL – це потужне обладнання з бензиновим двигуном, виготовлене в Італії. Призначений для забезпечення електроенергією в різних умовах.
+              </p>
+              <h3>Переваги генератора:</h3>
+              <ul>
+                <li>Висока потужність 9 кВт</li>
+                <li>Надійний бензиновий двигун</li>
+                <li>Легкість у транспортуванні</li>
+                <li>Стабільна робота в різних умовах</li>
+                <li>Простота в експлуатації</li>
+              </ul>
+              <h3>Основні технічні характеристики:</h3>
+              <ul>
+                <li>Потужність: 9 кВт</li>
+                <li>Тип двигуна: Бензиновий</li>
+                <li>Напруга: 220 В</li>
+                <li>Вага: 90 кг</li>
+                <li>Габарити: 700х500х600 мм</li>
+                <li>Країна виробник: Італія</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for GE-7500 MBH RENTAL -->
+    <div class="modal-overlay" id="ge7500Modal">
+      <div class="modal-container modal-lg">
+        <div class="modal-content modal-body">
+          <a href="#" class="modal-close">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDZMNiAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTYgNkwxOCAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" alt="Закрыть">
+          </a>
+          <div class="image-div">
+            <div class="product-images">
+              <div class="product-image-container">
+                <img src="images/ge7500_image1.png" alt="GE-7500 MBH RENTAL - фото 1">
+              </div>
+              <div class="product-image-container">
+                <img src="images/ge7500_image2.png" alt="GE-7500 MBH RENTAL - фото 2">
+              </div>
+            </div>
+          </div>
+          <div class="text-div">
+            <div class="product-description">
+              <p>
+                Генератор GE-7500 MBH RENTAL – компактне та надійне рішення для забезпечення електроенергією. Виготовлений в Італії з бензиновим двигуном.
+              </p>
+              <h3>Переваги генератора:</h3>
+              <ul>
+                <li>Потужність 7.5 кВт</li>
+                <li>Надійний бензиновий двигун</li>
+                <li>Портативна конструкція</li>
+                <li>Стабільна подача електроенергії</li>
+                <li>Простота в обслуговуванні</li>
+              </ul>
+              <h3>Основні технічні характеристики:</h3>
+              <ul>
+                <li>Потужність: 7.5 кВт</li>
+                <li>Тип двигуна: Бензиновий</li>
+                <li>Напруга: 220 В</li>
+                <li>Вага: 85 кг</li>
+                <li>Габарити: 650х480х580 мм</li>
+                <li>Країна виробник: Італія</li>
               </ul>
             </div>
           </div>
@@ -467,7 +783,7 @@
             <div class="product-card d-flex flex-column h-100">
               <div class="d-flex flex-grow-1">
                 <div class="text-content flex-grow-1">
-                  <h5 class="section-title">ПАЛЕТНА ЛІНІЯ</h5>
+                  <h5 class="section-title">ПЕЛЕТНА ЛІНІЯ</h5>
                   <p class="section-subtitle">Продуктивність, до 300 кг/год</p>
                   <p class="section-subtitle">Потужність, 45-кВт</p>
                 </div>
@@ -477,7 +793,7 @@
               </div>
               <div class="button-group">
                 <button class="btn buy-btn me-2">Замовити</button>
-                <button class="btn">Детальніше</button>
+                <a href="#pelletLineModal" class="btn">Детальніше</a>
               </div>
             </div>
           </div>
@@ -495,7 +811,7 @@
               </div>
               <div class="button-group">
                 <button class="btn buy-btn me-2">Замовити</button>
-                <button class="btn">Детальніше</button>
+                <a href="#conveyorJointModal" class="btn">Детальніше</a>
               </div>
             </div>
           </div>
@@ -533,7 +849,7 @@
               </div>
               <div class="button-group">
                 <button class="btn buy-btn me-2">Замовити</button>
-                <button class="btn">Детальніше</button>
+                <a href="#barbell25kgModal" class="btn">Детальніше</a>
               </div>
             </div>
           </div>
@@ -551,7 +867,7 @@
               </div>
               <div class="button-group">
                 <button class="btn buy-btn me-2">Замовити</button>
-                <button class="btn">Детальніше</button>
+                <a href="#barbell15kgModal" class="btn">Детальніше</a>
               </div>
             </div>
           </div>
@@ -569,7 +885,7 @@
               </div>
               <div class="button-group">
                 <button class="btn buy-btn me-2">Замовити</button>
-                <button class="btn">Детальніше</button>
+                <a href="#barbell10kgModal" class="btn">Детальніше</a>
               </div>
             </div>
           </div>
@@ -588,7 +904,7 @@
               </div>
               <div class="button-group">
                 <button class="btn buy-btn me-2">Замовити</button>
-                <button class="btn">Детальніше</button>
+                <a href="#ge9000Modal" class="btn">Детальніше</a>
               </div>
             </div>
           </div>
@@ -607,7 +923,7 @@
               </div>
               <div class="button-group">
                 <button class="btn buy-btn me-2">Замовити</button>
-                <button class="btn">Детальніше</button>
+                <a href="#ge7500Modal" class="btn">Детальніше</a>
               </div>
             </div>
           </div>
