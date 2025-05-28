@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description">
+  <meta name="description" content="Надійні рішення з металу">
   <title>Надійні рішення з металу</title>
   <!-- Bootstrap CSS for responsive design and styling -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
       margin-top: 15px;
     }
 
-    /* Modal styles from test project */
+    /* Modal styles */
     .modal-overlay {
       display: none;
       background: rgba(0, 0, 0, 0.8);
@@ -61,7 +61,7 @@
     .modal-container {
       min-height: 100vh;
       display: flex;
-      align-items: flex-start;
+      align-items: center; /* Center vertically when content fits */
       justify-content: center;
       padding: 20px;
       box-sizing: border-box;
@@ -119,21 +119,21 @@
     }
 
     .product-images {
+      flex-direction: row;
       display: flex;
       gap: 20px;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
 
     .product-image-container {
-        width: 220px;
-        height: 260px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
     }
 
     .product-image-container img {
@@ -188,6 +188,7 @@
     @media (max-width: 768px) {
       .modal-container {
         padding: 10px;
+        align-items: flex-start; /* Revert to top alignment for smaller screens */
       }
 
       .modal-body {
@@ -202,12 +203,12 @@
 
       .product-images {
         flex-direction: row;
+        flex-wrap: nowrap;
         align-items: center;
         gap: 15px;
       }
 
       .product-image-container {
-        width: 180px;
         height: 200px;
       }
 
@@ -234,6 +235,7 @@
     @media (max-width: 560px) {
       .modal-container {
         padding: 5px;
+        align-items: flex-start; /* Ensure top alignment for very small screens */
       }
 
       .image-div {
@@ -246,7 +248,6 @@
       }
 
       .product-image-container {
-        width: 150px;
         height: 170px;
       }
 
@@ -266,6 +267,13 @@
         height: 35px;
         background: rgba(0, 0, 0, 0.7);
         border-radius: 50%;
+      }
+    }
+
+    /* Fallback for larger screens where content fits */
+    @media (min-height: 800px) {
+      .modal-container {
+        align-items: center; /* Center vertically when viewport height is sufficient */
       }
     }
 
@@ -301,36 +309,28 @@
           <div class="image-div">
             <div class="product-images">
               <div class="product-image-container">
-                <img src="images/pellet_line_image1.png" alt="Пелетна лінія - фото 1">
+                <img src="images/details/pellet_line_image1.png">
               </div>
               <div class="product-image-container">
-                <img src="images/pellet_line_image2.png" alt="Пелетна лінія - фото 2">
+                <img src="images/details/pellet_line_image2.png">
               </div>
             </div>
           </div>
           <div class="text-div">
             <div class="product-description">
               <p>
-                Пелетна лінія призначена для виробництва пелет з біомаси, таких як тирса, солома або інші органічні матеріали. Забезпечує високу продуктивність до 300 кг/год та оснащена потужним двигуном на 45 кВт.
+                Пелетна лінія
               </p>
-              <h3>Переваги пелетної лінії:</h3>
+              <p>
+                Лінія для виробництва паливних пелетів з відходів деревини та с/г відходів фракцією до 5 мм (тирса), продуктивністю до 300 кг/год.
+              </p>
+              <h3>Технічні характеристики:</h3>
               <ul>
-                <li>Висока продуктивність до 300 кг/год</li>
-                <li>Енергоефективний двигун на 45 кВт</li>
-                <li>Автоматизований процес виробництва</li>
-                <li>Міцна конструкція з якісної сталі</li>
-                <li>Простота в обслуговуванні та експлуатації</li>
-                <li>Компактний дизайн для економії простору</li>
-              </ul>
-              <h3>Основні технічні характеристики:</h3>
-              <ul>
-                <li>Продуктивність: до 300 кг/год</li>
-                <li>Потужність: 45 кВт</li>
-                <li>Напруга: 380 В</li>
-                <li>Матеріал: сталь високої міцності</li>
-                <li>Вага: 1200 кг</li>
-                <li>Габарити: 2500х1200х1800 мм</li>
-                <li>Країна виробник: Україна</li>
+                <li>Продуктивність, до 300 кг/год</li>
+                <li>Потужність, 45-кВт</li>
+                <li>Габарити Д-8500,Ш-5000, В-3700</li>
+                <li>Вага, кг. 2200</li>
+                <li>Витрати дров на тонну брикету, куб/т - 0,7;</li>
               </ul>
             </div>
           </div>
@@ -348,41 +348,34 @@
           <div class="image-div">
             <div class="product-images">
               <div class="product-image-container">
-                <img src="images/conveyor_joint_image1.png" alt="З'єднання конвеєрних рештаків - фото 1">
+                <img src="images/details/conveyor_joint_image1.png">
               </div>
               <div class="product-image-container">
-                <img src="images/conveyor_joint_image2.png" alt="З'єднання конвеєрних рештаків - фото 2">
+                <img src="images/details/conveyor_joint_image2.png">
+              </div>
+              <div class="product-image-container">
+                <img src="images/details/conveyor_joint_image3.png">
               </div>
             </div>
           </div>
           <div class="text-div">
             <div class="product-description">
               <p>
-                З'єднання конвеєрних рештаків забезпечує надійне та міцне з'єднання елементів конвеєра, що гарантує стабільну роботу системи транспортування. Виготовлено з високоякісної сталі для довговічності.
+                Зєднання конвеєрних рештаків вугільних шахт
               </p>
-              <h3>Переваги з'єднання:</h3>
-              <ul>
-                <li>Висока міцність і надійність з'єднання</li>
-                <li>Стійкість до корозії</li>
-                <li>Простота монтажу</li>
-                <li>Сумісність з різними типами конвеєрів</li>
-                <li>Довговічна конструкція</li>
-              </ul>
-              <h3>Основні технічні характеристики:</h3>
-              <ul>
-                <li>Матеріал: сталь</li>
-                <li>Товщина металу: 3 мм</li>
-                <li>Вага: 5 кг</li>
-                <li>Габарити: 300х150х50 мм</li>
-                <li>Країна виробник: Україна</li>
-              </ul>
+              <p>
+                1. Забезпечується повна надійність з'єднання залишків конвеєрного ставу між собою, завдяки чому гарантується сталість максимально можливої ​​при даному вугіллі падіння пласта продуктивності конвеєра.
+              </p>
+              <p>
+                2. Після складання рештаків у процесі роботи конвеєра потреба в періодичній підтяжці болтів від- про Втрата болтів, гайок та їх самовідгвинчування під час роботи конвеєрних рештаків є дуже істотним фактором, що ускладнює експлоатацію конвеєрів, що коливаються. Для усунення цих недоліків у пропонованому болтовому з'єднанні конвеєрних рештаків головка болта виконана у вигляді гачка, вільно проходить у довгастий отвір вуха рештака, з тією метою, щоб після повороту болта його гайку можна було скріпити зі щитком провушини і з'єднувати.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Modal for Стальна піч (existing) -->
+    <!-- Modal for Стальна піч -->
     <div class="modal-overlay" id="stoveModal">
       <div class="modal-container modal-lg">
         <div class="modal-content modal-body">
