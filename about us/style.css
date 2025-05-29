@@ -240,7 +240,7 @@ body {
 @media (max-width: 991px) {
     .gallery-item img {
         width: 100%;
-        max-width: 300px;
+        max-width: 460px;
         margin: 0 auto;
     }
     
@@ -334,6 +334,9 @@ body {
     .hero-section {
         padding: 50px 0;
         min-height: 200px;
+    }
+    .experience-number {
+        min-width: 65px;
     }
     .about-title{
         font-size: 24px;
