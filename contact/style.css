@@ -14,7 +14,7 @@ body {
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8) !important;
     padding: 15px 0;
     position: absolute;
     width: 100%;
@@ -741,14 +741,6 @@ body {
    3. LAYOUT COMPONENTS
    ==================================== */
 /* ----- 3.1 Navbar ----- */
-.navbar {
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    padding: 15px 0;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
 
 .contact-icon {
     width: 24px;
