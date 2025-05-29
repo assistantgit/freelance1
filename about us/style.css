@@ -542,3 +542,158 @@ body {
         height: 25px;
     }
 }
+
+/* ====================================
+   3. LAYOUT COMPONENTS
+   ==================================== */
+/* ----- 3.1 Navbar ----- */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    padding: 15px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.contact-text {
+    font-size: 16px;
+    color: white;
+}
+
+.navbar-brand img {
+    max-height: 50px;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link.btn {
+    background-color: #343a40 !important;
+    color: white !important;
+    border: 1px solid #495057;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Mobile view adjustments */
+.contact-info-container-mobile {
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid #666;
+    }
+    
+    .nav-link {
+        text-align: center;
+        padding: 15px 0;
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    .nav-link.btn {
+        margin: 0;
+        background-color: transparent !important;
+        border: none !important;
+    }
+}
+
+/* Desktop view adjustments */
+@media (min-width: 992px) {
+    .contact-info-container-mobile {
+        display: none !important;
+    }
+    
+    .contact-info-container {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .navbar > .container-fluid {
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .navbar-nav {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+/* Остальные стили остаются без изменений */
+
+
+/* Измените этот медиа-запрос в вашем CSS */
+@media (max-width: 1199px) {
+    .nav-link.btn.btn-dark {
+        background-color: transparent !important; /* Убрали фон */
+        border: none !important; /* Убрали границу */
+        color: var(--text-light) !important;
+        padding: 8px 16px !important;
+        margin: 5px 0 !important;
+        display: inline-block !important;
+        width: auto !important;
+        max-width: 120px !important;
+    }
+    
+    .nav-link.btn.btn-dark:hover {
+        background-color: transparent !important; /* Убрали фон при наведении */
+        border-color: transparent !important; /* Убрали границу при наведении */
+        color: var(--text-light) !important;
+    }
+}
+
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    gap: 25px; /* Добавляем расстояние между пунктами меню */
+  }
+  
+  .nav-link {
+    padding: 8px 15px; /* Увеличиваем внутренние отступы */
+    white-space: nowrap; /* Запрещаем перенос текста */
+  }
+}
+
+
+/* Для контейнера с контактами */
+.contact-info-container {
+  position: static;
+  transform: none;
+  margin-right: 30px;
+}
+
+/* Для основного меню */
+.navbar-collapse {
+  flex-grow: 0; /* Не растягивать на всю ширину */
+}

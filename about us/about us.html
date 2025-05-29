@@ -14,59 +14,60 @@
   <!-- Hero Section with Header -->
   <section class="hero-section">
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-          <div class="contact-info-container-mobile d-flex d-lg-none align-items-center me-3">
-            <div class="contact-info me-2">
-              <img src="images/phone_icon.png" class="contact-icon" alt="Телефон">
-              <span class="contact-text d-none d-sm-inline">+38 (067) 464 88 13</span>
-            </div>
-            <div class="contact-info">
-              <img src="images/icon_local.png" class="contact-icon" alt="Адреса">
-              <span class="contact-text d-none d-sm-inline">Київ, вул. Гвинтошия,4 корп.9</span>
-            </div>
+      <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- Mobile Section -->
+        <div class="contact-info-container-mobile d-flex flex-row align-items-center d-lg-none">
+          <div class="contact-info d-flex align-items-center">
+            <img src="images/phone_icon.png" class="contact-icon" alt="Телефон">
+            <span class="contact-text d-none d-sm-inline">+38 (067) 464 88 13</span>
           </div>
-
-          <!-- Logo linking to homepage -->
+          <div class="contact-info d-flex align-items-center">
+            <img src="images/icon_local.png" class="contact-icon" alt="Адреса">
+            <span class="contact-text d-none d-sm-inline">Київ, вул. Гвинтошия,4 корп.9</span>
+          </div>
           <a class="navbar-brand" href="#">
-            <img src="images/logo.png" alt="Logo">
+            <img src="images/logo.png" alt="Логотип">
           </a>
-
-          <div class="contact-info-container mx-auto d-none d-lg-flex">
-            <div class="contact-info me-3">
-              <img src="images/phone_icon.png" class="contact-icon" alt="Телефон">
-              <span>+38 (067) 464 88 13</span>
-            </div>
-            <div class="contact-info">
-              <img src="images/icon_local.png" class="contact-icon" alt="Адреса">
-              <span>Київ, вул. Гвинтошия,4 корп.9</span>
-            </div>
-          </div>
-
-          <!-- Hamburger menu for mobile navigation -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Переключити навігацію">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключити навігацію">
             <span class="navbar-toggler-icon"></span>
           </button>
+        </div>
 
-          <!-- Navigation links, collapse on mobile -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="../home%20page/home%20page.html" aria-current="page">Головна</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../about%20us/about%20us.html">О нас</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../contact/contact.html">Контакти</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link btn btn-dark" href="../shop/shop.html">Магазин</a>
-              </li>
-            </ul>
+        <!-- Desktop Contact Info -->
+        <div class="contact-info-container d-none d-lg-flex">
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png">
+          </a>
+          <div class="contact-info me-3">
+            <img src="images/phone_icon.png" class="contact-icon" alt="Телефон">
+            <span>+38 (067) 464 88 13</span>
+          </div>
+          <div class="contact-info">
+            <img src="images/icon_local.png" class="contact-icon" alt="Адреса">
+            <span>Київ, вул. Гвинтошия,4 корп.9</span>
           </div>
         </div>
-      </nav>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="../home%20page/home%20page.html" aria-current="page">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about%20us/about%20us.html">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contact/contact.html">Контакти</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-dark" href="../shop/shop.html">Магазин</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     </header>
     <!-- Hero content with main call-to-action -->
     <div class="container">
