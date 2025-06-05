@@ -36,6 +36,7 @@ body {
 
 .navbar-collapse {
     text-align: center;
+    flex-grow: 0;
 }
 
 .navbar-brand img { 
@@ -263,6 +264,7 @@ body {
     align-items: center;
     display: flex;
     gap: 10px;
+    z-index: 2;
 }
 
 .btn-outline-secondary {
@@ -511,7 +513,6 @@ body {
 @media (max-width: 768px) {
     .modal-container {
         padding: 10px;
-        align-items: flex-start; /* Revert to top alignment for smaller screens */
     }
 
     .modal-body {
@@ -558,7 +559,6 @@ body {
 @media (max-width: 560px) {
     .modal-container {
         padding: 5px;
-        align-items: flex-start; /* Ensure top alignment for very small screens */
     }
 
     .image-div {
@@ -593,12 +593,6 @@ body {
     }
 }
 
-/* Fallback for larger screens where content fits */
-@media (min-height: 800px) {
-    .modal-container {
-        align-items: center; /* Center vertically when viewport height is sufficient */
-    }
-}
 
 /* Support for older browsers without :has() */
 @supports not (selector(:has(*))) {
@@ -1120,8 +1114,9 @@ body {
 /* ----- 7.8 Extra Small Devices (576px and down) ----- */
 @media (max-width: 576px) {
     .hero-section {
-        padding: 120px 0 50px 0;
-        min-height: 10px;
+        padding: 50px 0;
+        min-height: 460px;
+        padding-top: 120px;
     }
     
     .hero-title { 
