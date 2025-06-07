@@ -351,12 +351,12 @@ body {
 }
 
 .category-item {
-    margin: 5px 0;
+    margin-bottom: 10px;
     font-size: 16px;
 }
 
 .category-item input[type="checkbox"] {
-    margin-right: 5px;
+    margin-right: 8px;
     transform: scale(1.1);
 }
 
@@ -620,16 +620,6 @@ body {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.category-item {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-.category-item input[type="checkbox"] {
-    margin-right: 5px;
-    transform: scale(1.1);
 }
 
 .category-icon {
