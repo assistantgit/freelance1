@@ -20,6 +20,30 @@
   </style>
 </head>
 <body>
+  <!-- Modal for Order Form -->
+  <div class="modal-overlay" id="orderFormModal">
+    <div class="modal-container modal-lg">
+      <div class="modal-content modal-body">
+        <a href="#" class="modal-close">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDZMNiAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTYgNkwxOCAxOCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+" >
+        </a>
+        <div class="contact-form-container">
+          <h3 class="form-title">Залиште заявку — ми зв'яжемось з вами найближчим часом</h3>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name"><i class="fa-regular fa-user icon-form"></i></label>
+              <input type="text" id="name" placeholder="Ім'я" required>
+            </div>
+            <div class="form-group">
+              <label for="phone"><i class="fa-solid fa-phone icon-form"></i></label>
+              <input type="tel" id="phone" placeholder="Телефон" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Надіслати</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
     <!-- Modal for Пелетна лінія -->
     <div class="modal-overlay" id="pelletLineModal">
       <div class="modal-container modal-lg">
@@ -870,7 +894,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#pelletLineModal" class="btn">Опис</a>
                 </div>
               </div>
@@ -888,7 +912,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#conveyorJointModal" class="btn">Опис</a>
                 </div>
               </div>
@@ -907,7 +931,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#SteelStove" class="btn">Опис</a>
                 </div>
               </div>
@@ -925,7 +949,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#barbell25kgModal" class="btn">Опис</a>
                 </div>
               </div>
@@ -943,7 +967,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#barbell20kgModal" class="btn">Опис</a>
                 </div>
               </div>
@@ -961,7 +985,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#barbell15kgModal" class="btn">Опис</a>
                 </div>
               </div>
@@ -979,7 +1003,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#barbell10kgModal" class="btn">Опис</a>
                 </div>
               </div>
@@ -997,7 +1021,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#barbell5kgModal" class="btn">Опис</a>
                 </div>
               </div>
@@ -1015,7 +1039,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#kolosnikichavunni" class="btn">Опис</a>
                 </div>
               </div>
@@ -1033,7 +1057,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#dvoopornyypidshipnikovyyvuzol" class="btn">Опис</a>
                 </div>
               </div>
@@ -1052,7 +1076,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#ge9000" class="btn">Опис</a>
                 </div>
               </div>
@@ -1071,7 +1095,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#ge7500" class="btn">Опис</a>
                 </div>
               </div>
@@ -1090,7 +1114,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#ge4500mi" class="btn">Опис</a>
                 </div>
               </div>
@@ -1109,7 +1133,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#ge6900" class="btn">Опис</a>
                 </div>
               </div>
@@ -1128,7 +1152,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#ge9000rent" class="btn">Опис</a>
                 </div>
               </div>
@@ -1147,7 +1171,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#gesx18000" class="btn">Опис</a>
                 </div>
               </div>
@@ -1165,7 +1189,7 @@
                   </div>
                 </div>
                 <div class="button-group">
-                  <button class="btn buy-btn me-2">Замовити</button>
+                  <a href="#orderFormModal" class="btn buy-btn me-2">Замовити</a>
                   <a href="#budivelnipobutivky" class="btn">Опис</a>
                 </div>
               </div>

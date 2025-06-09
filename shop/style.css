@@ -266,6 +266,7 @@ body {
     color: var(--primary-color);
     font-weight: bold;
     height: 50px;
+    line-height: 35px;
     transition: all 0.3s ease;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
@@ -1183,3 +1184,74 @@ body {
     visibility: visible;
     opacity: 1;
   }
+
+  .contact-form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    min-height: 300px;
+    margin: 0 auto;
+}
+
+.form-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: start;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+    background-color: transparent;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.contact-form label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #777;
+}
+
+.icon-form {
+    font-size: 16px;
+    color: #777;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: 40%;
+    margin-top: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: block;
+}
+
+.btn-primary:hover {
+    background-color: #e0354e;
+    border-color: #e0354e;
+}
