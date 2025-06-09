@@ -42,6 +42,15 @@ body {
     border-color: #e0354e;
 }
 
+.contact-info-container {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    margin-right: 15px;
+    align-items: center;
+}
 
 
 
@@ -392,16 +401,6 @@ body {
     font-size: 16px;
 }
 
-/* Контактная информация */
-.contact-info-container {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 14px;
-    margin-right: 15px;
-    align-items: center;
-}
 
 .contact-info {
     display: flex;
@@ -676,22 +675,10 @@ body {
 
 
 @media (min-width: 992px) {
-  .navbar-nav {
-    gap: 25px; /* Добавляем расстояние между пунктами меню */
-  }
-  
   .nav-link {
     padding: 8px 15px; /* Увеличиваем внутренние отступы */
     white-space: nowrap; /* Запрещаем перенос текста */
   }
-}
-
-
-/* Для контейнера с контактами */
-.contact-info-container {
-  position: static;
-  transform: none;
-  margin-right: 30px;
 }
 
 /* Для основного меню */
@@ -715,4 +702,10 @@ body {
 .navbar-collapse.show + .navbar-toggler .navbar-toggler-icon,
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cline x1='6' y1='6' x2='24' y2='24' stroke='white' stroke-width='2'/%3e%3cline x1='24' y1='6' x2='6' y2='24' stroke='white' stroke-width='2'/%3e%3c/svg%3e");
+}
+
+
+.contact-link {
+    color: inherit;
+    text-decoration: none;
 }

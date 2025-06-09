@@ -26,7 +26,7 @@ body {
 
 /* ----- 3.1 Navbar (from old code) ----- */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 15px 0;
     position: absolute;
     width: 100%;
@@ -794,4 +794,10 @@ body {
     .footer-contact-item {
         font-size: 12px;
     }
+}
+
+
+.contact-link {
+    color: inherit;
+    text-decoration: none;
 }

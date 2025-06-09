@@ -1,4 +1,6 @@
-/* Existing CSS (unchanged, included for context) */
+/* ====================================
+   1. CSS VARIABLES (ROOT)
+   ==================================== */
 :root {
     --primary-color: #ff3c5a;
     --orange-color: #FF8C00;
@@ -8,13 +10,22 @@
     --dark-bg: #1F1F1F;
 }
 
+/* ====================================
+   2. BASE STYLES
+   ==================================== */
 body {
     font-family: 'Commissioner', sans-serif;
     overflow-x: hidden;
 }
 
-.navbar {
-    background-color: rgba(0, 0, 0, 0.8) ;
+/* ====================================
+   3. LAYOUT COMPONENTS
+   ==================================== */
+
+/* ----- 3.1 Navbar ----- */
+/* Стили для PC версии из старого кода */
+.navbar.navbar-dark {
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 15px 0;
     position: absolute;
     width: 100%;
@@ -22,16 +33,122 @@ body {
     z-index: 1000;
 }
 
-.navbar-brand img { 
+.navbar-dark .navbar-collapse {
+    text-align: center;
+}
+
+.navbar-dark .navbar-brand img { 
     height: 30px; 
 }
 
-.navbar .nav-link {
+.navbar-dark .nav-link {
     color: var(--text-light);
+    margin: 0 10px;
     font-size: 16px;
-    color: white ;
 }
 
+.contact-info-container {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    margin-right: 15px;
+    align-items: center;
+}
+
+
+.navbar-dark .contact-info {
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.navbar-dark .contact-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* Стили для Mobile версии из текущего кода */
+.navbar:not(.navbar-dark) {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar:not(.navbar-dark) .navbar-brand img { 
+    max-height: 50px; 
+}
+
+.navbar:not(.navbar-dark) .nav-link {
+    color: var(--text-light);
+    font-size: 16px;
+    color: white;
+}
+
+.contact-info-container-mobile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    order: -1;
+}
+
+.navbar:not(.navbar-dark) .contact-info {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.navbar:not(.navbar-dark) .contact-text {
+    font-size: 16px;
+    color: white;
+}
+
+.navbar:not(.navbar-dark) .nav-link.btn {
+    background-color: #343a40;
+    color: white;
+    border: 1px solid #495057;
+}
+
+.navbar:not(.navbar-dark) .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar:not(.navbar-dark) .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ----- 3.2 Hero Section ----- */
+.hero-section {
+    background: url('images/bg1.png') no-repeat center center;
+    background-size: cover;
+    color: var(--text-light);
+    padding: 100px 0;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 30px;
+    font-family: 'Tektur', sans-serif;
+    text-align: center;
+}
+
+/* Остальные стили из текущей версии */
 .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -50,27 +167,8 @@ body {
     border-color: #e0354e;
 }
 
-.hero-section {
-    background: url('images/bg1.png') no-repeat center center;
-    background-size: cover;
-    color: var(--text-light);
-    padding: 100px 0;
-    min-height: 300px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .footer-align {
     align-items: center;
-}
-
-.contact-info-container-mobile {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    order: -1;
 }
 
 .footer {
@@ -115,13 +213,6 @@ body {
 
 .footer-contact-column:first-child {
     margin-right: 20px;
-}
-
-.contact-info-container-mobile {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    order: -1;
 }
 
 /* Media Queries for Responsive Design */
@@ -180,14 +271,6 @@ body {
     align-items: flex-start;
     flex-wrap: nowrap; 
     width: 100%;
-}
-
-.hero-title {
-    font-size: 35px;
-    font-weight: 700;
-    margin-top: 30px;
-    font-family: 'Tektur', sans-serif;
-    text-align: center;
 }
 
 .about-section {
@@ -278,30 +361,6 @@ body {
     transform: scale(1.05); 
 }
 
-.contact-info-container {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 14px;
-    margin-right: 15px;
-    align-items: center;
-}
-
-.contact-info {
-    display: flex;
-    align-items: center;
-    color: var(--text-light);
-    font-size: 16px;
-    margin-right: 20px;
-}
-
-.contact-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 5px;
-}
-
 .about-item { 
     font-size: 16px; 
     color: black;
@@ -313,8 +372,6 @@ body {
     max-width: 100%;
     height: auto;
 }
-
-/* Existing CSS remains unchanged, add these new rules */
 
 .about-align {
     align-items: center;
@@ -397,34 +454,12 @@ body {
         font-size: 30px; 
     }
 
-    .contact-info-container {
-        position: static;
-        transform: none;
-        justify-content: center;
-        margin-bottom: 15px;
-        flex-wrap: wrap;
-    }
     .experience-strip {
         gap: 10px;
         text-align: center;
         justify-content: start;
     }
 
-    .navbar-brand {
-        order: 0;
-    }
-
-    .navbar-toggler {
-        order: 1;
-    }
-
-    .navbar .container {
-        flex-wrap: nowrap;
-    }
-
-    .contact-info { 
-        margin-bottom: 5px; 
-    }
     .about-section{
         text-align: center;
         margin-left: auto;
@@ -449,12 +484,6 @@ body {
 @media (max-width: 576px) {
     .hero-section {
         padding-top: 120px;
-    }
-    
-    .contact-icon {
-        width: 20px;
-        height: 20px;
-        margin-right: 2px;
     }
 
     .about-title{
@@ -501,11 +530,11 @@ body {
 
 @media (max-width: 767px) {
     .contact-text {
-        display: none ;
+        display: none;
     }
 
     .contact-info-container-mobile .contact-text {
-        display: none ;
+        display: none;
     }
 
     .contact-info {
@@ -518,18 +547,6 @@ body {
         height: 24px;
     }
 
-    .navbar .container {
-        flex-wrap: nowrap;
-    }
-    
-    .navbar-brand {
-        order: 0;
-    }
-    
-    .navbar-toggler {
-        order: 1;
-    }
-
     .navbar-brand img {
         height: 25px;
     }
@@ -538,13 +555,13 @@ body {
 .manufacturing-section {
     background-color: var(--dark-bg);
     padding: 60px 0;
-    max-width: 1200px; /* Constrain the section width */
-    margin: 0 auto; /* Center the section */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .manufacturing-image {
     width: 100%;
-    max-width: 300px; /* Limit image size on mobile */
+    max-width: 300px;
     margin: 0 auto;
 }
 
@@ -565,7 +582,7 @@ body {
     }
 
     .manufacturing-image {
-        max-width: 400px; /* Slightly larger image for tablets */
+        max-width: 400px;
         margin-bottom: 30px;
     }
 
@@ -586,11 +603,15 @@ body {
     }
 }
 
-/* Desktop screens (992px and above) */
 @media (min-width: 992px) {
     .manufacturing-section .row {
         display: flex;
         align-items: center;
+    }
+
+    .contact-info-container {
+        justify-content: center;
+        gap: 20px;
     }
 
     .manufacturing-image {
@@ -625,7 +646,7 @@ body {
 
 @media (max-width: 768px) {
     .about-section .footer-column {
-        flex-direction: row ;
+        flex-direction: row;
     }
     
     .about-section .footer-contact-column {
@@ -639,34 +660,33 @@ body {
     }
 }
 
-/* Мобильные устройства */
 @media (max-width: 991px) {
     .manufacturing-image {
-        max-width: 100%; /* Remove max-width constraint */
-        width: 100%; /* Span full container width */
-        margin: 0; /* Remove auto margins to ensure full width */
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
         display: block;
     }
 
     .manufacturing-image img {
-        width: 100%; /* Ensure the image itself spans the full width of its container */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Ensure the image covers the area without distortion */
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 }
 
 @media (max-width: 768px) {
     .manufacturing-image {
-        max-width: 100%; /* Remove max-width constraint */
-        width: 100%; /* Span full container width */
-        margin: 0; /* Remove auto margins to ensure full width */
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
         display: block;
     }
 
     .manufacturing-image img {
-        width: 100%; /* Ensure the image itself spans the full width of its container */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Ensure the image covers the area without distortion */
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 }
 
@@ -679,22 +699,19 @@ body {
         padding-bottom: 10px;
     }
 
-    /* Rule to make the manufacturing image span full width on mobile */
     .manufacturing-image {
-        max-width: 100%; /* Remove max-width constraint */
-        width: 100vw; /* Span full viewport width */
-        margin: 0; /* Remove auto margins to ensure full width */
+        max-width: 100%;
+        width: 100vw;
+        margin: 0;
         display: block;
     }
 
     .manufacturing-image img {
-        width: 100%; /* Ensure the image itself spans the full width of its container */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Ensure the image covers the area without distortion */
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 }
-
-
 
 @media (max-width: 1199px) {
     .navbar-collapse {
@@ -737,105 +754,6 @@ body {
     display: block ;
 }
 
-/* ====================================
-   3. LAYOUT COMPONENTS
-   ==================================== */
-/* ----- 3.1 Navbar ----- */
-
-.contact-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-}
-
-.contact-info {
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-.contact-text {
-    font-size: 16px;
-    color: white;
-}
-
-.navbar-brand img {
-    max-height: 50px;
-}
-
-
-.nav-link.btn {
-    background-color: #343a40 ;
-    color: white ;
-    border: 1px solid #495057;
-}
-
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.3);
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/* Mobile view adjustments */
-.contact-info-container-mobile {
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-}
-
-@media (max-width: 991px) {
-    .navbar-nav {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .nav-item {
-        width: 100%;
-        border-bottom: 1px solid #666;
-    }
-    
-    .nav-link {
-        text-align: center;
-        padding: 15px 0;
-        width: 100%;
-        font-size: 18px;
-    }
-    
-    .nav-link.btn {
-        margin: 0;
-        background-color: transparent ;
-        border: none ;
-    }
-}
-
-/* Desktop view adjustments */
-@media (min-width: 992px) {
-    .contact-info-container-mobile {
-        display: none ;
-    }
-    
-    .contact-info-container {
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .navbar > .container-fluid {
-        justify-content: center;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    .navbar-nav {
-        justify-content: center;
-        gap: 20px;
-    }
-}
-
-/* Остальные стили остаются без изменений */
-
-
 /* Измените этот медиа-запрос в вашем CSS */
 @media (max-width: 992px) {
     .nav-link {
@@ -857,38 +775,20 @@ body {
         height: 1px;
         background-color: #626262; /* Сіра лінія */
     }
+}
 
-    
-    .nav-link.btn.btn-dark:hover {
-        background-color: transparent ; /* Убрали фон при наведении */
-        border-color: transparent ; /* Убрали границу при наведении */
-        color: var(--text-light) ;
+@media (max-width: 991px) {
+    .nav-link.btn {
+        background-color: transparent !important;
+        border: none !important;
+        color: var(--text-light) !important;
     }
-}
-
-
-@media (min-width: 992px) {
-  .navbar-nav {
-    gap: 25px; /* Добавляем расстояние между пунктами меню */
-  }
-  
-  .nav-link {
-    padding: 8px 15px; /* Увеличиваем внутренние отступы */
-    white-space: nowrap; /* Запрещаем перенос текста */
-  }
-}
-
-
-/* Для контейнера с контактами */
-.contact-info-container {
-  position: static;
-  transform: none;
-  margin-right: 30px;
-}
-
-/* Для основного меню */
-.navbar-collapse {
-  flex-grow: 0; /* Не растягивать на всю ширину */
+    
+    .nav-link.btn:hover {
+        background-color: transparent !important;
+        border-color: transparent !important;
+        color: var(--text-light) !important;
+    }
 }
 
 
@@ -907,4 +807,10 @@ body {
 .navbar-collapse.show + .navbar-toggler .navbar-toggler-icon,
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cline x1='6' y1='6' x2='24' y2='24' stroke='white' stroke-width='2'/%3e%3cline x1='24' y1='6' x2='6' y2='24' stroke='white' stroke-width='2'/%3e%3c/svg%3e");
+}
+
+
+.contact-link {
+    color: inherit;
+    text-decoration: none;
 }
