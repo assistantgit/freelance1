@@ -711,17 +711,18 @@
           </a>
 
           <!-- Contact info for desktop -->
-          <div class="contact-info-container mx-auto d-none d-lg-flex">
-            <div class="contact-info me-3">
+          <div class="contact-info-container mx-auto d-none d-lg-flex"> 
+            <div class="contact-info me-3 position-relative" onclick="copyPhoneNumber(this)">
               <img src="images/phone_icon.png" class="contact-icon">
-              <span>+38 (067) 464 88 13</span>
+              <span class="phone-number">+38 (067) 464 88 13</span>
+              <div class="copy-tooltip">Скопійовано!</div>
             </div>
             <div class="contact-info">
-               <a href="https://www.google.com/maps/search/%D0%9A%D0%B8%D1%97%D0%B2,+%D0%B2%D1%83%D0%BB.+%D0%93%D0%B2%D0%B8%D0%BD%D1%82%D0%BE%D1%88%D0%B8%D1%8F,4+%D0%BA%D0%BE%D1%80%D0%BF.9/@50.4378954,30.3760343,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D" 
-                target="_blank" 
-                class="contact-link">
-                  <img src="images/icon_local.png" class="contact-icon" alt="Местоположение">
-                  <span>Київ, вул. Гвинтошия,4 корп.9</span>
+              <a href="https://www.google.com/maps/search/%D0%9A%D0%B8%D1%97%D0%B2,+%D0%B2%D1%83%D0%BB.+%D0%93%D0%B2%D0%B8%D0%BD%D1%82%D0%BE%D1%88%D0%B8%D1%8F,4+%D0%BA%D0%BE%D1%80%D0%BF.9/@50.4378954,30.3760343,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D" 
+              target="_blank" 
+              class="contact-link">
+                <img src="images/icon_local.png" class="contact-icon" alt="Местоположение">
+                <span>Київ, вул. Гвинтошия,4 корп.9</span>
               </a>
             </div>
           </div>
@@ -761,7 +762,11 @@
                 <span class="contact-text d-none d-sm-inline">+38 (067) 464 88 13</span>
               </div>
               <div class="contact-info d-flex align-items-center">
-                <img src="images/icon_local.png" class="contact-icon" alt="Адреса">
+                <a href="https://www.google.com/maps/search/%D0%9A%D0%B8%D1%97%D0%B2,+%D0%B2%D1%83%D0%BB.+%D0%93%D0%B2%D0%B8%D0%BD%D1%82%D0%BE%D1%88%D0%B8%D1%8F,4+%D0%BA%D0%BE%D1%80%D0%BF.9/@50.4378954,30.3760343,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D" 
+                  target="_blank" 
+                  class="d-flex align-items-center text-decoration-none">
+                  <img src="images/icon_local.png" class="contact-icon" alt="Адреса">
+                </a>
               </div>
             </div>
             <div class="center-logo mx-auto">
@@ -1340,5 +1345,16 @@
       });
     });
   </script>
+  <script>
+  function copyPhoneNumber(el) {
+    const text = el.querySelector('.phone-number').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      el.classList.add('show-tooltip');
+      setTimeout(() => {
+        el.classList.remove('show-tooltip');
+      }, 1500);
+    });
+  }
+</script>
 </body>
 </html>
