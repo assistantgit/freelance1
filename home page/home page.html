@@ -15,108 +15,261 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="hero-section">
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block">
-        <div class="container">
-          <!-- Logo -->
-          <a class="navbar-brand" href="#">
-            <img src="images/logo.png">
-          </a>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png">
+        </a>
 
-          <!-- Contact info for desktop -->
-          <div class="contact-info-container mx-auto d-none d-lg-flex">
-            <div class="contact-info me-3 position-relative" onclick="copyPhoneNumber(this)">
-              <img src="images/phone_icon.png" class="contact-icon">
-              <span class="phone-number">+38 (067) 464 88 13</span>
-              <div class="copy-tooltip">Скопировано!</div>
+        <!-- Contact info for desktop -->
+        <div class="contact-info-container mx-auto d-none d-lg-flex">
+          <div class="contact-info me-3 position-relative" onclick="copyPhoneNumber(this)">
+            <img src="images/phone_icon.png" class="contact-icon">
+            <span class="phone-number">+38 (067) 464 88 13</span>
+            <div class="copy-tooltip">Скопировано!</div>
+          </div>
+          <div class="contact-info">
+              <a href="https://www.google.com/maps/search/%D0%9A%D0%B8%D1%97%D0%B2,+%D0%B2%D1%83%D0%BB.+%D0%93%D0%B2%D0%B8%D0%BD%D1%82%D0%BE%D1%88%D0%B8%D1%8F,4+%D0%BA%D0%BE%D1%80%D0%BF.9/@50.4378954,30.3760343,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D" 
+              target="_blank" 
+              class="contact-link">
+                <img src="images/icon_local.png" class="contact-icon" alt="Местоположение">
+                <span>Київ, вул. Гвинтошия,4 корп.9</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navbar toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Переключити навігацію">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="../home%20page/home%20page.html" aria-current="page">Головна</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about%20us/about%20us.html">О нас</a>
+            </li>
+            <li class="nav-item"> 
+              <a class="nav-link" href="../contact/contact.html">Контакти</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-dark" href="../shop/shop.html">Магазин</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <nav class="navbar navbar-expand-lg d-lg-none">
+      <div class="container-fluid">
+        <!-- Mobile Section -->
+        <div class="contact-info-container-mobile d-flex d-lg-none">
+          <div class="left-side d-flex align-items-center">
+            <div class="contact-info me-3">
+              <a href="tel:+380674648813" class="d-flex align-items-center text-decoration-none">
+                <img src="images/phone_icon.png" class="contact-icon" alt="Телефон">
+              </a>
             </div>
-            <div class="contact-info">
-               <a href="https://www.google.com/maps/search/%D0%9A%D0%B8%D1%97%D0%B2,+%D0%B2%D1%83%D0%BB.+%D0%93%D0%B2%D0%B8%D0%BD%D1%82%D0%BE%D1%88%D0%B8%D1%8F,4+%D0%BA%D0%BE%D1%80%D0%BF.9/@50.4378954,30.3760343,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D" 
+            <div class="contact-info d-flex align-items-center">
+              <a href="https://www.google.com/maps/search/%D0%9A%D0%B8%D1%97%D0%B2,+%D0%B2%D1%83%D0%BB.+%D0%93%D0%B2%D0%B8%D0%BD%D1%82%D0%BE%D1%88%D0%B8%D1%8F,4+%D0%BA%D0%BE%D1%80%D0%BF.9/@50.4378954,30.3760343,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D" 
                 target="_blank" 
-                class="contact-link">
-                  <img src="images/icon_local.png" class="contact-icon" alt="Местоположение">
-                  <span>Київ, вул. Гвинтошия,4 корп.9</span>
+                class="d-flex align-items-center text-decoration-none">
+                <img src="images/icon_local.png" class="contact-icon" alt="Адреса">
               </a>
             </div>
           </div>
-
-          <!-- Navbar toggler -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Переключити навігацію">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <!-- Navbar links -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="../home%20page/home%20page.html" aria-current="page">Головна</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../about%20us/about%20us.html">О нас</a>
-              </li>
-              <li class="nav-item"> 
-                <a class="nav-link" href="../contact/contact.html">Контакти</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link btn btn-dark" href="../shop/shop.html">Магазин</a>
-              </li>
-            </ul>
+          <div class="center-logo mx-auto">
+            <a class="navbar-brand" href="#">
+              <img src="images/logo.png" alt="Логотип">
+            </a>
+          </div>
+          <div class="right-side d-flex align-items-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Переключити навігацію">
+              <span class="navbar-toggler-icon"></span>
+            </button>
           </div>
         </div>
-      </nav>
-      
-      <nav class="navbar navbar-expand-lg d-lg-none">
-        <div class="container-fluid">
-          <!-- Mobile Section -->
-          <div class="contact-info-container-mobile d-flex d-lg-none">
-            <div class="left-side d-flex align-items-center">
-              <div class="contact-info me-3">
-                <a href="tel:+380674648813" class="d-flex align-items-center text-decoration-none">
-                  <img src="images/phone_icon.png" class="contact-icon" alt="Телефон">
-                </a>
-              </div>
-              <div class="contact-info d-flex align-items-center">
-                <a href="https://www.google.com/maps/search/%D0%9A%D0%B8%D1%97%D0%B2,+%D0%B2%D1%83%D0%BB.+%D0%93%D0%B2%D0%B8%D0%BD%D1%82%D0%BE%D1%88%D0%B8%D1%8F,4+%D0%BA%D0%BE%D1%80%D0%BF.9/@50.4378954,30.3760343,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D" 
-                  target="_blank" 
-                  class="d-flex align-items-center text-decoration-none">
-                  <img src="images/icon_local.png" class="contact-icon" alt="Адреса">
-                </a>
-              </div>
-            </div>
-            <div class="center-logo mx-auto">
-              <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="Логотип">
-              </a>
-            </div>
-            <div class="right-side d-flex align-items-center">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Переключити навігацію">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <a class="nav-link" href="../home%20page/home%20page.html" aria-current="page">Головна</a>
+          <a class="nav-link" href="../about%20us/about%20us.html">О нас</a>
+          <a class="nav-link" href="../contact/contact.html">Контакти</a>
+          <a class="nav-link btn btn-dark" href="../shop/shop.html">Магазин</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="banner-section">
+    <div class="banner-slider">
+      <!-- Banner 1 -->
+      <div class="banner-slide">
+        <div class="banner-flex">
+          <!-- Левая часть -->
+          <div class="banner-left-part">
+            <div class="banner-left d-flex flex-column justify-content-center w-100">
+              <img src="mosa_logo.png" alt="Mosa Logo" class="banner-mosa mb-3">
+              <h2 class="banner-title mb-3">Генератори<br>виробництва Італія</h2>
+              <a href="../shop/shop.html" class="btn btn-primary mb-1">Детальніше</a>
             </div>
           </div>
-          <!-- Navigation Links -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <a class="nav-link" href="../home%20page/home%20page.html" aria-current="page">Головна</a>
-            <a class="nav-link" href="../about%20us/about%20us.html">О нас</a>
-            <a class="nav-link" href="../contact/contact.html">Контакти</a>
-            <a class="nav-link btn btn-dark" href="../shop/shop.html">Магазин</a>
+          <div class="banner-right-part">
+            <div class="banner-image-overlay">
+              <img src="banner1.png" class="banner-img" alt="Генератор">
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
-    <!-- Hero content with main call-to-action -->
-    <div class="container">
-      <div class="hero-content py-4">
-        <h1 class="hero-title">Надійні рішення з металу для вашого бізнесу та будівництва</h1>
-        <p class="hero-subtitle">Високоякісні металеві вироби для промисловості будівництва та інженерії</p>
-        <a href="../contact/contact.html" class="btn btn-primary">Оформити замовлення</a>
+        <!-- mobile markup -->
+        <div class="banner-mobile d-lg-none mt-1">
+          <div class="d-flex flex-column align-items-start px-3 pt-3">
+            <h2 class="banner-title mb-2">
+              Генератори<br>виробництва Італія
+            </h2>
+            <a href="../shop/shop.html" class="btn btn-primary mb-2 banner-mobile-btn">Детальніше</a>
+          </div>
+          <div class="image-wrapper-banner-mobile">
+            <img src="banner1.png" class="product-image banner-img-mobile" alt="Генератор">
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner 2 -->
+      <div class="banner-slide" style="display: none;">
+        <div class="banner-flex">
+          <!-- Левая часть -->
+          <div class="banner-left-part">
+            <div class="banner-left d-flex flex-column justify-content-center w-100">
+              <img src="mosa_logo.png" alt="Mosa Logo" class="banner-mosa mb-3">
+              <h2 class="banner-title mb-3">Лиття чорних<br>та кольорових металів</h2>
+              <a href="../shop/shop.html" class="btn btn-primary mb-1">Детальніше</a>
+            </div>
+          </div>
+          <div class="banner-right-part">
+            <div class="banner-image-overlay">
+              <img src="banner1.png" class="banner-img" alt="Генератор">
+            </div>
+          </div>
+        </div>
+        <!-- mobile markup -->
+        <div class="banner-mobile d-lg-none mt-1">
+          <div class="d-flex flex-column align-items-start px-3 pt-3">
+            <h2 class="banner-title mb-2">
+              Лиття чорних<br>та кольорових металів
+            </h2>
+            <a href="../shop/shop.html" class="btn btn-primary mb-2 banner-mobile-btn">Детальніше</a>
+          </div>
+          <div class="image-wrapper-banner-mobile">
+            <img src="banner1.png" class="product-image banner-img-mobile" alt="Генератор">
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner 3 -->
+      <div class="banner-slide" style="display: none;">
+        <div class="banner-flex">
+          <!-- Левая часть -->
+          <div class="banner-left-part">
+            <div class="banner-left d-flex flex-column justify-content-center w-100">
+              <img src="mosa_logo.png" alt="Mosa Logo" class="banner-mosa mb-3">
+              <h2 class="banner-title mb-3">Нестандартні металовироби<br>та металоконструкції</h2>
+              <a href="../shop/shop.html" class="btn btn-primary mb-1">Детальніше</a>
+            </div>
+          </div>
+          <div class="banner-right-part">
+            <div class="banner-image-overlay">
+              <img src="banner1.png" class="banner-img" alt="Генератор">
+            </div>
+          </div>
+        </div>
+        <!-- mobile markup -->
+        <div class="banner-mobile d-lg-none mt-1">
+          <div class="d-flex flex-column align-items-start px-3 pt-3">
+            <h2 class="banner-title mb-2">
+              Нестандартні металовироби<br>та металоконструкції
+            </h2>
+            <a href="../shop/shop.html" class="btn btn-primary mb-2 banner-mobile-btn">Детальніше</a>
+          </div>
+          <div class="image-wrapper-banner-mobile">
+            <img src="banner1.png" class="product-image banner-img-mobile" alt="Генератор">
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner 4 -->
+      <div class="banner-slide" style="display: none;">
+        <div class="banner-flex">
+          <!-- Левая часть -->
+          <div class="banner-left-part">
+            <div class="banner-left d-flex flex-column justify-content-center w-100">
+              <img src="mosa_logo.png" alt="Mosa Logo" class="banner-mosa mb-3">
+              <h2 class="banner-title mb-3">Стань виробником<br>біопалива</h2>
+              <a href="../shop/shop.html" class="btn btn-primary mb-1">Детальніше</a>
+            </div>
+          </div>
+          <div class="banner-right-part">
+            <div class="banner-image-overlay">
+              <img src="banner1.png" class="banner-img" alt="Генератор">
+            </div>
+          </div>
+        </div>
+        <!-- mobile markup -->
+        <div class="banner-mobile d-lg-none mt-1">
+          <div class="d-flex flex-column align-items-start px-3 pt-3">
+            <h2 class="banner-title mb-2">
+              Стань виробником<br>біопалива
+            </h2>
+            <a href="../shop/shop.html" class="btn btn-primary mb-2 banner-mobile-btn">Детальніше</a>
+          </div>
+          <div class="image-wrapper-banner-mobile">
+            <img src="banner1.png" class="product-image banner-img-mobile" alt="Генератор">
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner 5 -->
+      <div class="banner-slide" style="display: none;">
+        <div class="banner-flex">
+          <!-- Левая часть -->
+          <div class="banner-left-part">
+            <div class="banner-left d-flex flex-column justify-content-center w-100">
+              <img src="mosa_logo.png" alt="Mosa Logo" class="banner-mosa mb-3">
+              <h2 class="banner-title mb-3">Послуги<br>металообробки</h2>
+              <a href="../shop/shop.html" class="btn btn-primary mb-1">Детальніше</a>
+            </div>
+          </div>
+          <div class="banner-right-part">
+            <div class="banner-image-overlay">
+              <img src="banner1.png" class="banner-img" alt="Генератор">
+            </div>
+          </div>
+        </div>
+        <!-- mobile markup -->
+        <div class="banner-mobile d-lg-none mt-1">
+          <div class="d-flex flex-column align-items-start px-3 pt-3">
+            <h2 class="banner-title mb-2">
+              Послуги<br>металообробки
+            </h2>
+            <a href="../shop/shop.html" class="btn btn-primary mb-2 banner-mobile-btn">Детальніше</a>
+          </div>
+          <div class="image-wrapper-banner-mobile">
+            <img src="banner1.png" class="product-image banner-img-mobile" alt="Генератор">
+          </div>
+        </div>
       </div>
     </div>
   </section>
-
-  <!-- Остальной код остается без изменений -->
+  <div class="banner-indicators d-flex justify-content-center mt-3">
+    <span class="banner-dot mx-1 active" data-index="0"></span>
+    <span class="banner-dot mx-1" data-index="1"></span>
+    <span class="banner-dot mx-1" data-index="2"></span>
+    <span class="banner-dot mx-1" data-index="3"></span>
+    <span class="banner-dot mx-1" data-index="4"></span>
+  </div>
   <!-- Features Section -->
   <section class="features-section">
     <div class="container">
@@ -335,93 +488,12 @@
       </div>
     </div>
   </section>
-  <!-- Detailed Products Section -->
-  <section class="products-section py-5">
-    <div class="container">
-      <h2 class="product-title align-items-center">
-        ВИГОТОВЛЯЄМО
-        <span class="gray-line flex-grow-1"></span>
-      </h2>
-      <div class="row g-4">
-        <div class="col-md-4 mb-2">
-          <div class="product-card p-3 d-flex h-100">
-            <div>
-              <h5 class="section-title">ПЕЛЕТНА ЛІНІЯ</h5>
-              <p class="section-subtitle">Продуктивність, до 300 кг/год</p>
-              <p class="section-subtitle">Потужність, 45-кВт</p>
-              <p class="section-subtitle">Габарити Д-8500,Ш-5000, В-3700</p>
-              <p class="section-subtitle">Вага, кг. 2200</p>
-            </div>
-            <div class="image-wrapper">
-              <img src="images/product9.png" class="product-image" alt="Генератори">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-2">
-          <div class="product-card p-3 d-flex h-100">
-            <div>
-              <h5 class="section-title">КОЛОСНИКИ ЧАВУННІ</h5>
-              <p class="section-subtitle">Чавунні грати в печах для проходу повітря під паливо та виходу золи з топки.</p>
-            </div>
-            <div class="image-wrapper">
-              <img src="images/product10.png" class="product-image" alt="Лиття металів">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-2">
-          <div class="product-card p-3 d-flex h-100">
-            <div>
-              <h5 class="section-title">ДИСКИ ДЛЯ ШТАНГИ</h5>
-              <p class="section-subtitle">20кг посадковий діаметр 52мм/31мм</p>
-              <p class="section-subtitle">15кг посадковий діаметр 52мм/31мм</p>
-              <p class="section-subtitle">5кг посадковий діаметр 31мм</p>
-            </div>
-            <div class="image-wrapper">
-              <img src="images/product11.png" class="product-image" alt="Металовироби">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-2">
-          <div class="product-card p-3 d-flex h-100">
-            <div>
-              <h5 class="section-title">ДВООПІРНИЙ ПІДШИПНИКОВИЙ ВУЗОЛ</h5>
-              <p class="section-subtitle">Точніше обертання</p>
-              <p class="section-subtitle">Низький рівень шуму при роботі</p>
-              <p class="section-subtitle">Компактніша конструкція</p>
-            </div>
-            <div class="image-wrapper">
-              <img src="images/product12.png" class="product-image">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-2">
-          <div class="product-card p-3 d-flex h-100">
-            <div>
-              <h5 class="section-title">СТАЛЬНА ПІЧ</h5>
-              <p class="section-subtitle">Розміри ВхШхГ - 600х290х450, мм.</p>
-              <p class="section-subtitle">Висота з патрубком - 670 мм.</p>
-              <p class="section-subtitle">Потужність - 7 кВт</p>
-              <p class="section-subtitle">ККД - 80%</p>
-            </div>
-            <div class="image-wrapper">
-              <img src="images/product13.png" class="product-image">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-12 mb-2">
-          <div class="product-card p-3 d-flex h-100 align-items-center justify-content-center" style="background-color: #fff;">
-            <h5>Та інше</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="row footer-align">
         <div class="col-md-2 footer-column" >
-          <img src="images/icon.png" class="footer-logo" alt="CALCIT Logo">
+          <img src="images/icon.png" class="footer-logo" alt="Logo">
         </div>
         <div class="col-md-6 footer-column d-flex flex-column align-items-center">
           <p class="footer-contact-item mb-1">© Всі права захищені.</p>
@@ -498,5 +570,39 @@
     });
   }
 </script>
+  <!-- Banner Slider JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.banner-slide');
+      const dots = document.querySelectorAll('.banner-dot');
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.display = (i === index) ? 'block' : 'none';
+          slide.style.opacity = (i === index) ? '1' : '0';
+          slide.style.transform = (i === index) ? 'translateX(0)' : 'translateX(100%)';
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      }
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          currentSlide = i;
+          showSlide(i);
+        });
+      });
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      const interval = setInterval(nextSlide, 7000);
+      showSlide(currentSlide);
+    });
+  </script>
 </body>
 </html>
